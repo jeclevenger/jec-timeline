@@ -4,7 +4,7 @@
 <h4>short term goals</h4>
 <ul>
 <li>
-clean out unnecessary formatting from initial example
+clean out unnecessary formatting from initial example (e.g. broken UX glyphicons for turning on/off sets)
 </li>
 <li>
 allow pushing different data sets (and navigation UXs), render externally

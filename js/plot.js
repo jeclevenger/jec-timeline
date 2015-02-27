@@ -331,6 +331,12 @@ $(document).ready(function() {
 		}
 
 	});
+
+// replace glyphicons w/ +/-
+//    var text = $( "#tier_" + this.id + "_span" ).text();
+//        $("#tier_" + this.id + "_span" ).text(
+//            text == "+" ? "-" : "+");
+
 	plot(findSet(info));
 	mini_plot(findSet(info));
 	var unique = [];

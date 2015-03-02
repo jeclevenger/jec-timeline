@@ -1,13 +1,12 @@
 <h2>jec-timeline</h2>
+<p>currently hosted on <a href="http://www.caslmedia.com/jec-timeline">CaslMedia.com/jec-timeline</a></p>
 <p>timeline orginally from <a href="http://www.jeclevenger.com">JEClevenger.com</a> broken into a separate open source project</p>
 <hr>
 <h4>short term goals</h4>
 <ul>
+<li>wireframe desired workflow for pushing data sets</li>
 <li>
-clean out unnecessary formatting from initial example (e.g. broken UX glyphicons for turning on/off sets)
-</li>
-<li>
-allow pushing different data sets (and navigation UXs), render externally
+clean out unnecessary formatting from initial example
 </li>
 <li>
 start discussion on data format and possible changes for UX, speed, etc.

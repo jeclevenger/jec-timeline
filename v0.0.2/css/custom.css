@@ -1,0 +1,60 @@
+/* for d3 plotting */
+.axis path, .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.mini_axis path, .mini_axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.selected {
+    stroke: #6C7A89;
+    stroke-width: 5;
+}
+
+/* navigation and layout */
+html {
+	overflow-y: scroll;
+}
+body {
+	padding-bottom: 50px;
+}
+.content {
+    margin-right: 0;
+    margin-left: 0;
+    display: none;
+}
+.light {
+    font-weight: 300;
+}
+.navspan {
+    font-size: 18px; 
+    vertical-align: 10%;
+}
+.navspan-small {
+    font-size: 16px; 
+
+}
+#timeview h4 {
+	padding-top: 1em;
+}
+#timeview h4 span {
+	border-bottom: 2px solid #eee;
+}
+#timeview  h5 {
+	padding-top: 0.5em;
+	margin-bottom: 5px;
+}
+#timeview h5 small {
+	font-size: 14px;
+}
+
+#div_5 div {
+     font-weight:300;
+}
+
+

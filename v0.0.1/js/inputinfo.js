@@ -1,3 +1,4 @@
+var test1 = "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
 var info = [
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -5,7 +6,7 @@ var info = [
 	        "start": "01 June 2000",
 	        "end": "15 August 2003",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": test1
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -13,7 +14,7 @@ var info = [
 	        "start": "15 May 2004",
 	        "end": "15 August 2004",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": test1
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -21,7 +22,7 @@ var info = [
 	        "start": "15 May 2005",
 	        "end": "15 August 2005",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": test1
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -29,7 +30,7 @@ var info = [
 	        "start": "15 May 2006",
 	        "end": "15 August 2006",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": test1
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -37,7 +38,7 @@ var info = [
 	        "start": "15 May 2007",
 	        "end": "15 August 2007",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": test1
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -45,7 +46,7 @@ var info = [
 	        "start": "15 May 2008",
 	        "end": "15 August 2008",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": test1
         },
         {
 	        "title": "Super Market",

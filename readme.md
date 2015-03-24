@@ -15,16 +15,9 @@ http://colorbrewer2.org/
 </li>
 </ul>
 
-<h4>short term goals</h4>
+<h2>v0.1.0 coming very soon</h2>
 <ul>
-<li>wireframe desired workflow for pushing data sets</li>
-<li>
-clean out unnecessary formatting from initial example
-</li>
-<li>
-start discussion on data format and possible changes for UX, speed, etc.
-</li>
-<li>
-add text formatting example from JEClevenger.com
-</li>
+<li>standard data format</li>
+<li>nav</li>
+<li>examples</li>
 </ul>

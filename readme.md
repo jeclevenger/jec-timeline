@@ -21,3 +21,10 @@ http://colorbrewer2.org/
 <li>nav</li>
 <li>examples</li>
 </ul>
+
+<ul>todo
+<li>break apart data and plotting functions for nav, re-use d3 elements be more proper</li>
+<li>more data</li>
+<li>nav for selections</li>
+<li>consolidate d3 plotting functions</li>
+</ul>

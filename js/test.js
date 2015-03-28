@@ -17,17 +17,27 @@ $(document).ready(function() {
         $(".wrapper").remove();
         $(".container").append("<div class='wrapper'><div id='timeline'></div></div>");    
 
-        d3.select("#timeline").append("svg").attr({
+        var svg = d3.select("#timeline").append("svg").attr({
 			width: width,
 			height: height,
 			id: "svg"
 		});
-        d3.select("#svg").append("svg:g")
+        svg.append("svg:g")
             .attr("id", "barchart")
+        
+        svg.append("g").attr({
+			    "class": "axis",
+			    transform: "translate(" + [axisPadding, 0] + ")"
+			    });
     });
 
     $("#freshh").click(function() {
         d3.json("../data/sample.json", function(error, data) {
+            plot(data)
+        });        
+    });
+    $("#freshhh").click(function() {
+        d3.json("../data/jec-resume.json", function(error, data) {          
             plot(data)
         });        
     });
@@ -37,25 +47,38 @@ $(document).ready(function() {
 //add to plot function
 
 var timeScale = d3.time.scale()
-            //need to set on min data -> moved in plot function for now
-			//.domain([new Date(setdate), new Date])
 			.nice(d3.time.year)
 			.rangeRound([height - margin.bottom, margin.top]);
 
 
-
 function plot(data) {
-        var svg = d3.select("#svg")
-        var vis = d3.select("#barchart")
+        
+        var svg = d3.select("#svg");
+        var vis = d3.select("#barchart");
         var yAxis = d3.svg.axis().scale(timeScale).orient("left")
 			    .ticks(d3.time.years, 1);
-        var yAxisGroup = svg.append("g").attr({
-			    "class": "axis",
-			    transform: "translate(" + [axisPadding, 0] + ")"
-			    }).call(yAxis);
+        
+        var yAxisGroup = d3.select(".axis");        
 
-		timeScale.domain([new Date("01 June 2000"), new Date]).nice(d3.time.year).rangeRound([height - margin.bottom, margin.top]);
+        var min_date = d3.min(data, function (d) {
+            temp = new Date(d.t)
+            return temp
+        });
+
+        var max_date = d3.max(data, function (d) {
+            if (d.tt == "Current") {
+                temp = new Date
+                return temp
+            } else {
+                temp = new Date(d.tt)
+                return temp
+            }
+        });
+
+		timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([height - margin.bottom, margin.top]);
+
 		yAxisGroup.transition().ease("linear").duration(500).call(yAxis);
+
 		var eventAttrs = {
 				x: function (d, i) {
 					return col_width * (i + 1) + colPadding * i + axisPadding
@@ -98,7 +121,7 @@ function plot(data) {
 				.ease("linear")
 					.duration(1000)
 				.attr(eventAttrs)
-        vis.append("svg:rect").attr(eventAttrs)	
+        
     };
 
 });

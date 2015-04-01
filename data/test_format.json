@@ -1,0 +1,80 @@
+{
+    "meta": [
+        {
+        "type": "navigation",
+        "tag": "nav_a",
+	    "nav_a": [
+                    {
+                        "tag": "tier_a",
+                        "title": "Tier 1 Data"
+                    },
+                    {
+                        "tag": "tier_b",
+                        "title": "Tier 2 Data"
+                    },
+                    {
+                        "tag": "tier_c",
+                        "title": "Tier 3 Data"
+                    }
+                ]
+        },
+        {
+        "type": "header",
+	    "tag": "title",
+        "title": "Event Name"
+        },
+        {
+        "type": "header",
+	    "tag": "description",
+        "description": "Event Description"
+        }    
+    ],
+
+    "data": [
+        {
+	    "level_a": {
+		        "t": "01 June 2000",
+		        "tt": "15 August 2003"
+	        },
+        "title": "thisthis",
+	    "description": "thishihi",
+        "nav_a": "tier_a"
+        },
+        {
+	    "level_a": {
+		        "t": "11 June 2010",
+                "tt": "15 August 2012"
+	        },
+        "title": "thisthis",
+	    "description": "thishihi",
+        "nav_a": "tier_a"
+        },
+        {
+	    "level_a": {
+		        "t": "01 June 2000",
+                "tt": "15 August 2000"
+	        },
+        "title": "thisthis",
+	    "description": "thishihi",
+        "nav_a": "tier_a"
+        },
+        {
+	    "level_a": {
+		        "t": "01 June 2000",
+                "tt": "15 June 2000"
+	        },
+        "title": "thisthis",
+	    "description": "des2",
+        "nav_a": "tier_c"
+        },
+        {
+	    "level_a": {
+		        "t": "01 June 2014",
+                "tt": "01 June 2014"
+	        },
+        "title": "thisthiwwws",
+	    "description": "lwww;kdsdssa",
+        "nav_a": "tier_b"
+        }
+    ]   
+}

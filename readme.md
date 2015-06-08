@@ -21,6 +21,9 @@ http://colorbrewer2.org/
 jQuery data scrubbing based on user selection
 </li>
 <li>
+D3 plotting based on user selection
+</li>
+<li>
 json data format for timeline and jQuery nav
 </li>
 </ul>

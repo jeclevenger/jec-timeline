@@ -36,7 +36,7 @@ json data format for timeline and jQuery nav
 <li>standard data format</li>
 <li>nav</li>
 <li>examples</li>
-<li>text display with data scrubbing for recurring events, as half-done on <a>jeclevenger.com</a></li>
+<li>text display with data scrubbing for recurring events, as half-done on <a href="http://www.jeclevenger.com">jeclevenger.com</a></li>
 </ul>
 
 <h4>todo</h4>

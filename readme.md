@@ -32,6 +32,7 @@ json data format for timeline and jQuery nav
 
 
 <h4>v0.1.0 coming once standard data structures are chosen</h4>
+<p>standard data structure <a href="data/time_bound.json">started</a> for time-bound data, <a href="http://www.jeclevenger.com/writing/TIME.html">discussion</a> will follow in documentation shortly.</p>
 <ul>
 <li>standard data format</li>
 <li>nav</li>

@@ -3,7 +3,7 @@ $(document).ready(function() {
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
 			width = 600,
 			height = 1500,
-			mini_width = 600,
+			mini_width = 300,
 			mini_height = 144;
 	//create svg
 		svg = d3.select("#timeline").append("svg").attr({
@@ -80,7 +80,7 @@ $(document).ready(function() {
 		var mini_timeScale = d3.time.scale()
 			.domain([new Date(setdate), new Date])
 			.nice(d3.time.year)
-			.rangeRound([width - margin.bottom, margin.top]);
+			.rangeRound([mini_width - margin.bottom, margin.top]);
 	//axis
 		var yAxis = d3.svg.axis().scale(timeScale).orient("left")
 			.ticks(d3.time.years, 1);
@@ -202,7 +202,7 @@ $(document).ready(function() {
 	
 //////////mini plot
 	function mini_plot(data) {
-		mini_timeScale.domain([new Date(setdate), new Date]).nice(d3.time.year).rangeRound([width - margin.bottom, margin.top]);
+		mini_timeScale.domain([new Date(setdate), new Date]).nice(d3.time.year).rangeRound([mini_width - margin.bottom, margin.top]);
 		mini_yAxisGroup.transition().ease("linear").duration(500).call(mini_yAxis)
 			
 		var mini_eventAttrs = {

@@ -144,7 +144,7 @@ $(document).ready(function() {
 						return "#df65b0"
 					} else if (d.title == "Self Employed Odd Jobs") {
 						return "#e7298a"
-					} else if (d.title == "Apartment Maintence") {
+					} else if (d.title == "Apartment Maintenance") {
 						return "#ce1256"
 					} else if (d.title == "University Tutor") {
 						return "#91003f"
@@ -246,7 +246,7 @@ $(document).ready(function() {
 						return "#df65b0"
 					} else if (d.title == "Self Employed Odd Jobs") {
 						return "#e7298a"
-					} else if (d.title == "Apartment Maintence") {
+					} else if (d.title == "Apartment Maintenance") {
 						return "#ce1256"
 					} else if (d.title == "University Tutor") {
 						return "#91003f"

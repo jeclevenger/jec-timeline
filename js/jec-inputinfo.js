@@ -1,3 +1,5 @@
+var des_family_owned = "Growing up in a family owned business meant filling every role as necessary. Resturant: Busboy, Waiter, and Cook. Motel: Maintenance and Housekeeping. Primarly summers for the resturant, summer and some winters for the motel, maintence year round."
+
 var info = [
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -5,7 +7,7 @@ var info = [
 	        "start": "01 June 2000",
 	        "end": "15 August 2003",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": des_family_owned
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -13,7 +15,7 @@ var info = [
 	        "start": "15 May 2004",
 	        "end": "15 August 2004",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": des_family_owned
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -21,7 +23,7 @@ var info = [
 	        "start": "15 May 2005",
 	        "end": "15 August 2005",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": des_family_owned
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -29,7 +31,7 @@ var info = [
 	        "start": "15 May 2006",
 	        "end": "15 August 2006",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": des_family_owned
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -37,7 +39,7 @@ var info = [
 	        "start": "15 May 2007",
 	        "end": "15 August 2007",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": des_family_owned
         },
         {
 	        "title": "Family Owned Resturant & Resort",
@@ -45,7 +47,7 @@ var info = [
 	        "start": "15 May 2008",
 	        "end": "15 August 2008",
             "set": 5,
-	        "description": "Growing up in a family owned business I was required to fill nearly every position. The positions filled in the resturant started with bus boy and moved on to waiter and then to cook. The positions filled in the motel included both cleaning and maintence. Primarly during summers for the resturant, the motel for summer and some winter seasons, maintence year round."
+	        "description": des_family_owned
         },
         {
 	        "title": "Super Market",
@@ -53,7 +55,7 @@ var info = [
 	        "start": "15 May 2005",
 	        "end": "15 June 2006",
             "set": 4,
-	        "description": "Standard Shelf-Stocker, Box-Boy positions"
+	        "description": "Standard Shelf-Stocker and Box-Boy positions."
         },
         {
 	        "title": "Hardware Store",
@@ -61,7 +63,7 @@ var info = [
 	        "start": "01 August 2005",
 	        "end": "18 December 2008",
             "set": 3,
-	        "description": "Standard Shelf-Stocker, Box-Boy positions, eventually moving to Customer Support and Satisfaction in both electrical and paint divsions."
+	        "description": "Standard Shelf-Stocker, Box-Boy positions. Eventually moving to Customer Support and Management in both electrical and paint divsions."
         },
         {
 	        "title": "Self Employed Odd Jobs",
@@ -88,12 +90,12 @@ var info = [
 	        "description": "Filling vairous positions throughout the year, primarily in summer. Painting, contracted construction, lawn mowing, etc."
         },
         {
-	        "title": "Apartment Maintence",
+	        "title": "Apartment Maintenance",
 			"type": "employment",
 	        "start": "01 May 2009",
 	        "end": "15 July 2010",
             "set": 3,
-	        "description": "Painting, moving furniture, landscaping, cleaning, etc"
+	        "description": "Painting, moving furniture, landscaping, cleaning, etc."
         },
         {
 	        "title": "University Tutor",
@@ -101,7 +103,7 @@ var info = [
 	        "start": "01 September 2010",
 	        "end": "15 February 2011",
             "set": 3,
-	        "description": "Tutor engineering students in Statics, Dynamics, Mechanics of Materials, and Thermodynamics"
+	        "description": "Tutor engineering students in Statics, Dynamics, Mechanics of Materials, and Thermodynamics."
         },
         {
 	        "title": "R&D Machine Shop",
@@ -117,7 +119,7 @@ var info = [
 	        "start": "15 May 2012",
 	        "end": "18 December 2012",
             "set": 2,
-	        "description": "1-D 3-D modeling for engine system optimzation, etc, fix later, etsting too"
+	        "description": "Computationl Analysis: component and system level performance prediciton and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and managment (identifying need, planning a process, bringing new tools in-house, developing analysis process, data processing, communicating results, workflow review and optimization). Project based application of analysis to drive design decisions."
         },
         {
 	        "title": "Industry Leading Engine Manufacturer (R&D)",
@@ -125,7 +127,7 @@ var info = [
 	        "start": "01 June 2013",
 	        "end": "Current",
             "set": 2,
-	        "description": "Computational Fluid Dynamics Analyst, internal and external flow, engine optimization, validation with analysis, etc. fix later"
+	        "description": "Computationl Analysis: component and system level performance prediciton and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and managment (identifying need, planning a process, bringing new tools in-house, developing analysis process, data processing, communicating results, workflow review and optimization). Project based application of analysis to drive design decisions."
         },
         {
 	        "title": "Casl Media LLC",
@@ -278,22 +280,22 @@ var info = [
 	        "end": "25 August 2008",
 	        "type": "education",
             "set": 8,
-	        "description": "In the nature versus nurture debate recent findings consistently show the effect of nurture (i.e. enviroment) as much more significant than previsouly concluded. The effects of the enviroment you were raised in cannot be understated, reconginzing this is (in my opinion) a crucial step in understanding an individual's thoughts, beliefs, and achievements."
+	        "description": "The effects of the enviroment you were raised in cannot be overstated, reconginzing this is (in my opinion) a crucial step in understanding an individual's thoughts, beliefs, and achievements."
         },
         {
 	        "title": "Indirect Computer Learning",
 			"type": "informal education",
 	        "start": "01 July 2000",
-	        "end": "15 March 2013",
+	        "end": "15 March 2003",
             "set": 7,
-	        "description": "Our first home computer. Originally purchased with the intent of managing the family business but quickly turned into my means to connect with the internet from our extremely rural location. Although I wasn't using the machine with intent of learning, indirectly I started to develop the ability to use it as a means to solve problems."
+	        "description": "Our first home computer. Originally purchased with the intent of managing the family business, quickly turned into my means to connect with the internet from our rural location. Indirectly developed the ability to use it as a means to solve problems."
         },
         {
 	        "title": "Direct Computer Learning",
 			"type": "informal education",
-	        "start": "15 March 2013",
+	        "start": "15 March 2003",
 	        "end": "Current",
             "set": 7,
-	        "description": "From my first personal computer to the multitude of computing devices I use on a daily basis. Learning the capabilities of the comptuer, resources on the internet, structure of the internet, open knowledge, MOOCS, pirating stuff, etc. update later."
+	        "description": "The computer (leveraged with the internet) is the ultimate means of accessing knowledge, I try to push the bounds of this statement on a daily basis."
         }
     ];

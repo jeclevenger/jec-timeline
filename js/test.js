@@ -32,12 +32,12 @@ $(document).ready(function() {
     });
 
     $("#freshh").click(function() {
-        d3.json("../data/sample.json", function(error, data) {
+        d3.json("data/sample.json", function(error, data) {
             plot(data)
         });        
     });
     $("#freshhh").click(function() {
-        d3.json("../data/jec-resume.json", function(error, data) {          
+        d3.json("data/jec-resume.json", function(error, data) {          
             plot(data)
         });        
     });

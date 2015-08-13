@@ -57,7 +57,6 @@ $(document).ready(function() {
 		var counter = 0;
 		var colPadding = 10;
 		var mini_colPadding = 2;
-		var $root = $('html, body');
 		
 		var events = d3.select("#svg")
 		var mini_events = d3.select("#mini_svg")
@@ -85,7 +84,7 @@ $(document).ready(function() {
 		var yAxis = d3.svg.axis().scale(timeScale).orient("left")
 			.ticks(d3.time.years, 1);
 		
-		var mini_yAxis = d3.svg.axis().scale(mini_timeScale).orient("bottom")
+		var mini_yAxis = d3.svg.axis().scale(mini_timeScale).orient("top")
 			.ticks(d3.time.years, 2);
 
 		var yAxisGroup = svg.append("g").attr({
@@ -176,9 +175,6 @@ $(document).ready(function() {
 					$("p#timelineDes").text(d.description);
 					d3.selectAll("rect").classed("selected", false);
 					d3.select(this).classed("selected", true);
-					$root.animate({
-						scrollTop: $( "h5#scrolltarget" ).offset().top
-					}, 500);
 					return false;
 
 				});
@@ -280,9 +276,6 @@ $(document).ready(function() {
 					$("p#timelineDes").text(d.description);
 					d3.selectAll("rect").classed("selected", false);
 					d3.select(this).classed("selected", true);
-					$root.animate({
-						scrollTop: $( "div#mini_timeline" ).offset().top
-					}, 500);
 					return false;
 
 				});

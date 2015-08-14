@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	//svg dims and margin  
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
+            mini_margin = {top: 2, right: 0, bottom: 2, left: 0},
 			width = 600,
 			height = 1500,
 			mini_width = 300,
@@ -79,7 +80,7 @@ $(document).ready(function() {
 		var mini_timeScale = d3.time.scale()
 			.domain([new Date(setdate), new Date])
 			.nice(d3.time.year)
-			.rangeRound([mini_width - margin.bottom, margin.top]);
+			.rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
 	//axis
 		var yAxis = d3.svg.axis().scale(timeScale).orient("left")
 			.ticks(d3.time.years, 1);
@@ -197,10 +198,11 @@ $(document).ready(function() {
 	};
 	
 //////////mini plot
+// mini map bug for axis ticks, not "nicely" rounding the range..margins need to use proper names as well..
 	function mini_plot(data) {
-		mini_timeScale.domain([new Date(setdate), new Date]).nice(d3.time.year).rangeRound([mini_width - margin.bottom, margin.top]);
+		mini_timeScale.domain([new Date(setdate), new Date]).nice(d3.time.year).rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
 		mini_yAxisGroup.transition().ease("linear").duration(500).call(mini_yAxis)
-			
+		
 		var mini_eventAttrs = {
 				x: function (d, i) {
 					if (d.end == "Current") {
@@ -326,37 +328,4 @@ $(document).ready(function() {
 	});
 	plot(findSet(info));
 	mini_plot(findSet(info));
-	var unique = [];
-	for (i = 0; i < info.length; ++i) {
-		var test = $.inArray(info[i].title, unique);
-		if (test == -1) {
-		
-			var start = info[i].start;
-			var end = info[i].end;
-			
-			if (info[i].end == "Current") {
-				end = info[i].end;
-				start = start.slice(3);
-			} else {
-				start = start.slice(3);
-				end = end.slice(3);
-			}
-			
-			if (info[i].type == "employment") {
-				$("#employment").after("<p>" + info[i].description + "</p>");
-				$("#employment").after("<h5>" + info[i].title + " <small>" + start + " - " + end + "</small></h5>");
-			} else if (info[i].type == "formal education") {
-				$("#formal").after("<p>" + info[i].description + "</p>");
-				$("#formal").after("<h5>" + info[i].title + " <small>" + start + " - " + end + "</small></h5>");
-			} else if (info[i].type == "informal education") {
-				$("#informal").after("<p>" + info[i].description + "</p>");
-				$("#informal").after("<h5>" + info[i].title + " <small>" + start + " - " + end + "</small></h5>");
-			} else {
-			
-			}
-			
-			unique.push(info[i].title)
-		}
-		
-	}
 });

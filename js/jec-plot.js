@@ -280,6 +280,7 @@ $(document).ready(function() {
 					$("p#timelineDes").css('border-left-color', $(this).css('fill'));
 					d3.selectAll("rect").classed("selected", false);
 					d3.select(this).classed("selected", true);
+                    //todo color border of mini map <-> big map on single click. need to match events, ids?
 					return false;
 
 				});

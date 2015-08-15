@@ -172,8 +172,9 @@ $(document).ready(function() {
 				.attr(eventAttrs)
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
-					$("h5#timelineTitle").css('color', $(this).css('fill'));
+					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
 					$("p#timelineDes").text(d.description);
+                    $("p#timelineDes").css('border-left-color', $(this).css('fill'));
 					d3.selectAll("rect").classed("selected", false);
 					d3.select(this).classed("selected", true);
 					return false;
@@ -274,8 +275,9 @@ $(document).ready(function() {
 				.attr(mini_eventAttrs)
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
-					$("h5#timelineTitle").css('color', $(this).css('fill'));
+					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
 					$("p#timelineDes").text(d.description);
+					$("p#timelineDes").css('border-left-color', $(this).css('fill'));
 					d3.selectAll("rect").classed("selected", false);
 					d3.select(this).classed("selected", true);
 					return false;

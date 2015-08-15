@@ -137,7 +137,7 @@ $(document).ready(function() {
 						return "#74c476"
 					} else if (d.title == "Direct Computer Learning") {
 						return "#238b45"
-					} else if (d.title == "Family Owned Resturant & Resort") {
+					} else if (d.title == "Family Owned Restaurant & Resort") {
 						return "#d4b9da"
 					} else if (d.title == "Super Market") {
 						return "#c994c7"
@@ -250,7 +250,7 @@ $(document).ready(function() {
 						return "#74c476"
 					} else if (d.title == "Direct Computer Learning") {
 						return "#238b45"
-					} else if (d.title == "Family Owned Resturant & Resort") {
+					} else if (d.title == "Family Owned Restaurant & Resort") {
 						return "#d4b9da"
 					} else if (d.title == "Super Market") {
 						return "#c994c7"

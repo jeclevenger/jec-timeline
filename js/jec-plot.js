@@ -169,14 +169,19 @@ $(document).ready(function() {
 			rects.enter()
 				.append("svg:rect")
 				.attr("class", "bar")
+				.attr("id", function (d, i) {
+                    return "bar" + d.id
+                })
 				.attr(eventAttrs)
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
 					$("p#timelineDes").text(d.description);
                     $("p#timelineDes").css('border-left-color', $(this).css('fill'));
-					d3.selectAll("rect").classed("selected", false);
+					d3.selectAll("rect").classed("mini_selected", false);
+                    d3.selectAll("rect").classed("selected", false);
 					d3.select(this).classed("selected", true);
+                    d3.select("#mini_bar"+d.id).classed("mini_selected", true);
 					return false;
 
 				});
@@ -196,6 +201,10 @@ $(document).ready(function() {
 				.ease("linear")
 					.duration(1000)
 				.attr(eventAttrs)
+				.attr("class", "bar")
+				.attr("id", function (d, i) {
+                    return "bar" + d.id
+                })
 	};
 	
 //////////mini plot
@@ -272,15 +281,19 @@ $(document).ready(function() {
 			mini_rects.enter()
 				.append("mini_svg:rect")
 				.attr("class", "mini_bar")
+				.attr("id", function (d, i) {
+                    return "mini" + d.id
+                })
 				.attr(mini_eventAttrs)
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
 					$("p#timelineDes").text(d.description);
 					$("p#timelineDes").css('border-left-color', $(this).css('fill'));
-					d3.selectAll("rect").classed("selected", false);
-					d3.select(this).classed("selected", true);
-                    //todo color border of mini map <-> big map on single click. need to match events, ids?
+					d3.selectAll("rect").classed("mini_selected", false);
+                    d3.selectAll("rect").classed("selected", false);
+					d3.select(this).classed("mini_selected", true);
+                    d3.select("#bar"+d.id).classed("selected", true);
 					return false;
 
 				});
@@ -300,7 +313,10 @@ $(document).ready(function() {
 				.ease("linear")
 					.duration(1000)
 				.attr(mini_eventAttrs)
-
+				.attr("class", "mini_bar")
+				.attr("id", function (d, i) {
+                    return "mini_bar" + d.id
+                })
 	};
 
 

@@ -23,3 +23,26 @@
     border-left: 3px solid #eee;
     padding-left: 2px;
 }
+
+/* for d3 plotting */
+.axis path, .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.mini_axis path, .mini_axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.selected {
+    stroke: #6C7A89;
+    stroke-width: 5;
+}
+
+.mini_selected {
+    stroke: #6C7A89;
+    stroke-width: 2;
+}

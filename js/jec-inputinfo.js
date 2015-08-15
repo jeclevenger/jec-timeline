@@ -2,6 +2,7 @@ var des_family_owned = "Growing up in a family owned business meant filling ever
 
 var info = [
         {
+            "id": "one",
 	        "title": "Family Owned Resturant & Resort",
 	        "type": "employment",
 	        "start": "01 June 2000",
@@ -10,6 +11,7 @@ var info = [
 	        "description": des_family_owned
         },
         {
+            "id": 2,
 	        "title": "Family Owned Resturant & Resort",
 	        "type": "employment",
 	        "start": "15 May 2004",
@@ -18,6 +20,7 @@ var info = [
 	        "description": des_family_owned
         },
         {
+            "id": 3,
 	        "title": "Family Owned Resturant & Resort",
 			"type": "employment",
 	        "start": "15 May 2005",
@@ -26,6 +29,7 @@ var info = [
 	        "description": des_family_owned
         },
         {
+            "id": 4,
 	        "title": "Family Owned Resturant & Resort",
 	        "type": "employment",
 	        "start": "15 May 2006",
@@ -34,6 +38,7 @@ var info = [
 	        "description": des_family_owned
         },
         {
+            "id": 5,
 	        "title": "Family Owned Resturant & Resort",
 	        "type": "employment",
 	        "start": "15 May 2007",
@@ -42,6 +47,7 @@ var info = [
 	        "description": des_family_owned
         },
         {
+            "id": 6,
 	        "title": "Family Owned Resturant & Resort",
 	        "type": "employment",
 	        "start": "15 May 2008",
@@ -50,6 +56,7 @@ var info = [
 	        "description": des_family_owned
         },
         {
+            "id": 7,
 	        "title": "Super Market",
 			"type": "employment",
 	        "start": "15 May 2005",
@@ -58,6 +65,7 @@ var info = [
 	        "description": "Standard Shelf-Stocker and Box-Boy positions."
         },
         {
+            "id": 8,
 	        "title": "Hardware Store",
 			"type": "employment",
 	        "start": "01 August 2005",
@@ -66,6 +74,7 @@ var info = [
 	        "description": "Standard Shelf-Stocker, Box-Boy positions. Eventually moving to Customer Support and Management in both electrical and paint divsions."
         },
         {
+            "id": 9,
 	        "title": "Self Employed Odd Jobs",
 			"type": "employment",
 	        "start": "01 June 2006",
@@ -74,6 +83,7 @@ var info = [
 	        "description": "Filling vairous positions throughout the year, primarily in summer. Painting, contracted construction, lawn mowing, etc."
         },
         {
+            "id": 10,
 	        "title": "Self Employed Odd Jobs",
 			"type": "employment",
 	        "start": "01 June 2007",
@@ -82,6 +92,7 @@ var info = [
 	        "description": "Filling vairous positions throughout the year, primarily in summer. Painting, contracted construction, lawn mowing, etc."
         },
         {
+            "id": 11,
 	        "title": "Self Employed Odd Jobs",
 			"type": "employment",
 	        "start": "01 June 2008",
@@ -90,6 +101,7 @@ var info = [
 	        "description": "Filling vairous positions throughout the year, primarily in summer. Painting, contracted construction, lawn mowing, etc."
         },
         {
+            "id": 12,
 	        "title": "Apartment Maintenance",
 			"type": "employment",
 	        "start": "01 May 2009",
@@ -98,6 +110,7 @@ var info = [
 	        "description": "Painting, moving furniture, landscaping, cleaning, etc."
         },
         {
+            "id": 13,
 	        "title": "University Tutor",
 			"type": "employment",
 	        "start": "01 September 2010",
@@ -106,6 +119,7 @@ var info = [
 	        "description": "Tutor engineering students in Statics, Dynamics, Mechanics of Materials, and Thermodynamics."
         },
         {
+            "id": 14,
 	        "title": "R&D Machine Shop",
 			"type": "employment",
 	        "start": "15 September 2010",
@@ -114,6 +128,7 @@ var info = [
 	        "description": "Intern, Co-op, Full-time Machinist. Filled various roles in a small team for a contract-based research and development of machining and cutting technologies. Proficient on 3 and 4 axis manual/CNC lathes and mills (conversational code, G-Code written or generated), trained on all standard shop equipment and various testing apparatuses (fluid and solid mechanics)."
         },
         {
+            "id": 15,
 	        "title": "Industry Leading Engine Manufacturer (R&D)",
 			"type": "employment",
 	        "start": "15 May 2012",
@@ -122,6 +137,7 @@ var info = [
 	        "description": "Computationl Analysis: component and system level performance prediciton and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and managment (identifying need, planning a process, bringing new tools in-house, developing analysis process, data processing, communicating results, workflow review and optimization). Project based application of analysis to drive design decisions."
         },
         {
+            "id": 16,
 	        "title": "Industry Leading Engine Manufacturer (R&D)",
 			"type": "employment",
 	        "start": "01 June 2013",
@@ -130,6 +146,7 @@ var info = [
 	        "description": "Computationl Analysis: component and system level performance prediciton and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and managment (identifying need, planning a process, bringing new tools in-house, developing analysis process, data processing, communicating results, workflow review and optimization). Project based application of analysis to drive design decisions."
         },
         {
+            "id": "seventeen",
 	        "title": "Casl Media LLC",
 			"type": "employment",
 	        "start": "30 July 2014",
@@ -138,6 +155,7 @@ var info = [
 	        "description": "Co-founder and CEO"
         },
         {
+            "id": 18,
 	        "title": "Minnesota Public School",
 			"type": "formal education",
 	        "start": "15 August 1995",
@@ -146,6 +164,7 @@ var info = [
 	        "description": "Kindergarten through first grade in the Land of 10,000 Lakes"
         },
         {
+            "id": 19,
 	        "title": "Minnesota Public School",
 			"type": "formal education",
 	        "start": "15 August 1996",
@@ -154,6 +173,7 @@ var info = [
 	        "description": "Kindergarten through first grade in the Land of 10,000 Lakes"
         },
         {
+            "id": 20,
 	        "title": "Minnesota Private School",
 			"type": "formal education",
 	        "start": "15 August 1997",
@@ -162,6 +182,7 @@ var info = [
 	        "description": "Second grade in a Private Catholic School"
         },
         {
+            "id": 21,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 1998",
@@ -170,6 +191,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 22,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 1999",
@@ -178,6 +200,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 23,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2000",
@@ -186,6 +209,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 24,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2001",
@@ -194,6 +218,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 25,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2002",
@@ -202,6 +227,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 26,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2003",
@@ -210,6 +236,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 27,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2004",
@@ -218,6 +245,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 28,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2005",
@@ -226,6 +254,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 29,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2006",
@@ -234,6 +263,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 30,
 	        "title": "Michigan Public School",
 			"type": "formal education",
 	        "start": "15 August 2007",
@@ -242,6 +272,7 @@ var info = [
 	        "description": "Third and forth grade in the Lower Penninsula, Fifth grade through Highschool in the Upper Penninsula"
         },
         {
+            "id": 31,
 	        "title": "Michigan Public University",
 			"type": "formal education",
 	        "start": "25 August 2008",
@@ -250,6 +281,7 @@ var info = [
 	        "description": "BSME BS in Mechanical Engineering with a Minor in Mathematics (Magna Cum Laude). Various affilliations including Formula SAE (engine and composites), Four Wheelers, SAE, ASME."
         },
         {
+            "id": 32,
 	        "title": "Michigan Public University",
 			"type": "formal education",
 	        "start": "01 September 2010",
@@ -258,6 +290,7 @@ var info = [
 	        "description": "BSME BS in Mechanical Engineering with a Minor in Mathematics (Magna Cum Laude). Various affilliations including Formula SAE (engine and composites), Four Wheelers, SAE, ASME."
         },
         {
+            "id": 33,
 	        "title": "Michigan Public University",
 			"type": "formal education",
 	        "start": "10 January 2013",
@@ -266,6 +299,7 @@ var info = [
 	        "description": "BSME BS in Mechanical Engineering with a Minor in Mathematics (Magna Cum Laude). Various affilliations including Formula SAE (engine and composites), Four Wheelers, SAE, ASME."
         },
         {
+            "id": 34,
 	        "title": "Cumbria University (United Kingdom)",
 			"type": "formal education",
 	        "start": "03 July 2010",
@@ -274,6 +308,7 @@ var info = [
 	        "description": "Study abroad in North-East England"
         },
         {
+            "id": 35,
 	        "title": "Parental Home Teachings",
 			"type": "informal education",
 	        "start": "15 March 1990",
@@ -283,6 +318,7 @@ var info = [
 	        "description": "The effects of the enviroment you were raised in cannot be overstated, reconginzing this is (in my opinion) a crucial step in understanding an individual's thoughts, beliefs, and achievements."
         },
         {
+            "id": 36,
 	        "title": "Indirect Computer Learning",
 			"type": "informal education",
 	        "start": "01 July 2000",
@@ -291,6 +327,7 @@ var info = [
 	        "description": "Our first home computer. Originally purchased with the intent of managing the family business, quickly turned into my means to connect with the internet from our rural location. Indirectly developed the ability to use it as a means to solve problems."
         },
         {
+            "id": 37,
 	        "title": "Direct Computer Learning",
 			"type": "informal education",
 	        "start": "15 March 2003",

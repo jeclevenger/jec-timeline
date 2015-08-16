@@ -134,7 +134,7 @@ var info = [
 	        "start": "15 May 2012",
 	        "end": "18 December 2012",
             "set": 2,
-	        "description": "Computational Analysis: component and system level performance prediction and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and management (identifying need, planning a process, bringing new tools in-house, developing analysis process, data processing, communicating results, workflow review and optimization). Project based application of analysis to drive design decisions."
+	        "description": "Computational Analysis: component and system level performance prediction and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and management (identifying a need, process planning, bringing new tools in-house, developing the analysis workflow, data processing, communicating results, process review). Project based application of analysis to drive design decisions."
         },
         {
             "id": 16,
@@ -143,7 +143,7 @@ var info = [
 	        "start": "01 June 2013",
 	        "end": "Current",
             "set": 2,
-	        "description": "Computational Analysis: component and system level performance prediction and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and management (identifying need, planning a process, bringing new tools in-house, developing analysis process, data processing, communicating results, workflow review and optimization). Project based application of analysis to drive design decisions."
+	        "description": "Computational Analysis: component and system level performance prediction and optimization using multiple codes and validation techniques. Coupling codes, developing new computation routines, real world validation, analysis workflow development and management (identifying a need, process planning, bringing new tools in-house, developing the analysis workflow, data processing, communicating results, process review). Project based application of analysis to drive design decisions."
         },
         {
             "id": "seventeen",

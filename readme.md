@@ -1,5 +1,5 @@
 <h2>jec-timeline</h2>
-<p>currently hosted on <a href="http://www.caslmedia.com/jec-timeline/">CaslMedia.com/jec-timeline</a></p>
+<p>currently hosted on <a href="http://www.jeclevenger.com/static-sites/jec-timeline/">JEClevenger.com/static-sites/jec-timeline</a></p>
 <p>timeline orginally from <a href="http://www.jeclevenger.com">JEClevenger.com</a> broken into a separate open source project for exploring timeline data structures</p>
 <hr>
 <h4>inspired by these projects:</h4>

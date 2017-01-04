@@ -338,7 +338,8 @@ $(document).ready(function() {
 
 		startFunction();
 		if (jQuery.isEmptyObject(plotnames)) {
-			
+			plot(findSet(info))
+			mini_plot(findSet(info))
 		} else {
 			plot(findSet(info))
 			mini_plot(findSet(info))

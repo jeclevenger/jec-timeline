@@ -152,7 +152,10 @@ $(document).ready(function() {
 		var rects = vis.selectAll("rect.bar")
 			.data(data);
 
-			rects.enter().append("svg:rect")
+			rects.enter()
+                .append("svg:rect")
+                .attr(eventAttrs)
+                .attr("height", 0)
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
@@ -168,11 +171,10 @@ $(document).ready(function() {
 
             //update
 			rects
-                .style("opacity", 0)
 				.transition()
-                .style("opacity", 1)
-                    .duration(1000)
-				.attr(eventAttrs)
+				.ease("linear")
+					.attr(eventAttrs)
+					.duration(1000)
 				.attr("class", "bar")
 				.attr("id", function (d, i) {
                     return "bar" + d.id
@@ -239,6 +241,8 @@ $(document).ready(function() {
 			//enter
 			mini_rects.enter()
 				.append("mini_svg:rect")
+                .attr(mini_eventAttrs)
+                .attr("width", 0)
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
@@ -253,11 +257,10 @@ $(document).ready(function() {
 
             //update
 			mini_rects
-                .style("opacity", 0)
 				.transition()
-                .style("opacity", 1)
-                    .duration(1000)
-				.attr(mini_eventAttrs)
+				.ease("linear")
+					.attr(mini_eventAttrs)
+					.duration(1000)
 				.attr("class", "mini_bar")
 				.attr("id", function (d, i) {
                     return "mini_bar" + d.id
@@ -267,7 +270,7 @@ $(document).ready(function() {
 			mini_rects.exit()
 				.transition()
 				.ease("linear")
-					.attr("height", 0)
+					.attr("width", 0)
 					.duration(1000)
 					.remove();
 	}

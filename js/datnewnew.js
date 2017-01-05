@@ -206,43 +206,7 @@ $(document).ready(function() {
 				height: mini_col_width,
 
 				fill: function (d, i) {
-					if (d.title == "Minnesota Public School") {
-						return "#c6dbef"
-					} else if (d.title == "Minnesota Private School") {
-						return "#9ecae1"
-					} else if (d.title == "Michigan Public School") {
-						return "#6baed6"
-					} else if (d.title == "Michigan Public University") {
-						return "#3182bd"
-					} else if (d.title == "Cumbria University (United Kingdom)") {
-						return "#08519c"
-					} else if (d.title == "Parental Home Teachings") {
-						return "#bae4b3"
-					} else if (d.title == "Indirect Computer Learning") {
-						return "#74c476"
-					} else if (d.title == "Direct Computer Learning") {
-						return "#238b45"
-					} else if (d.title == "Family Owned Restaurant & Resort") {
-						return "#d4b9da"
-					} else if (d.title == "Super Market") {
-						return "#c994c7"
-					} else if (d.title == "Hardware Store") {
-						return "#df65b0"
-					} else if (d.title == "Self Employed Odd Jobs") {
-						return "#e7298a"
-					} else if (d.title == "Apartment Maintenance") {
-						return "#ce1256"
-					} else if (d.title == "University Tutor") {
-						return "#91003f"
-					} else if (d.title == "R&D Machine Shop") {
-						return "#fc9272"
-					} else if (d.title == "Industry Leading Engine Manufacturer (R&D)") {
-						return "#de2d26"
-					} else if (d.title == "Casl Media LLC") {
-						return "#000"
-					} else {
-						return "#000"
-					}
+					return d.color;
 				}
 		};
 
@@ -309,14 +273,8 @@ $(document).ready(function() {
 		$( "#tier_" + this.id + "_span" ).toggleClass('glyphicon-ok glyphicon-remove');
 
 		startFunction();
-		if (jQuery.isEmptyObject(plotnames)) {
-			plot(findSet(info))
-			mini_plot(findSet(info))
-		} else {
-			plot(findSet(info))
-			mini_plot(findSet(info))
-		}
-
+        plot(findSet(info));
+        mini_plot(findSet(info));
 	});
 	plot(findSet(info.data));
 	mini_plot(findSet(info.data));

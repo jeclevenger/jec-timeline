@@ -7,7 +7,7 @@ $(document).ready(function() {
 
        //svg dims and margin
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
-            mini_margin = {top: 2, right: 0, bottom: 2, left: 0},
+            mini_margin = {top: 2, right: 2, bottom: 2, left: 2},
 			width = 600,
 			height = 1500,
 			mini_width = 300,
@@ -86,13 +86,13 @@ $(document).ready(function() {
 		var mini_timeScale = d3.time.scale()
 			.domain([new Date(setdate), new Date])
 			.nice(d3.time.year)
-			.rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
+			.rangeRound([mini_width - mini_margin.right, mini_margin.left]);
 	//axis
 		var yAxis = d3.svg.axis().scale(timeScale).orient("left")
 			.ticks(d3.time.years, 1);
 
-		var mini_yAxis = d3.svg.axis().scale(mini_timeScale).orient("top")
-			.ticks(d3.time.years, 2);
+		var mini_yAxis = d3.svg.axis().scale(mini_timeScale).orient("bottom")
+			.ticks(d3.time.years, 1);
 
 		var yAxisGroup = svg.append("g").attr({
 			"class": "axis",
@@ -190,7 +190,7 @@ $(document).ready(function() {
 	}
 
 //////////mini plot
-// mini map bug for axis ticks, not "nicely" rounding the range..margins need to use proper names as well..
+
 	function mini_plot(data) {
         var min_date = d3.min(data, function (d) {
             temp = new Date(d.start);
@@ -219,7 +219,7 @@ $(document).ready(function() {
 					}
 				},
 				y: function (d, i) {
-					return mini_col_width * (d.set - 1) + mini_colPadding * d.set
+					return mini_height - (mini_col_width * (d.set + 1) + mini_colPadding * d.set + mini_col_width )
 				},
 				width: function (d, i) {
 						if (d.end == "Current") {

@@ -150,9 +150,8 @@ $(document).ready(function() {
 		};
 
 		var rects = vis.selectAll("rect.bar")
-			.data(data)
+			.data(data);
 
-			//enter
 			rects.enter().append("svg:rect")
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
@@ -168,9 +167,11 @@ $(document).ready(function() {
 				});
 
             //update
-			rects.transition()
-				.ease("linear")
-					.duration(1000)
+			rects
+                .style("opacity", 0)
+				.transition()
+                .style("opacity", 1)
+                    .duration(1000)
 				.attr(eventAttrs)
 				.attr("class", "bar")
 				.attr("id", function (d, i) {
@@ -182,9 +183,9 @@ $(document).ready(function() {
 				.ease("linear")
 					.attr("height", 0)
 					.duration(1000)
-					.remove()
+					.remove();
 
-	};
+	}
 
 //////////mini plot
 // mini map bug for axis ticks, not "nicely" rounding the range..margins need to use proper names as well..
@@ -233,16 +234,11 @@ $(document).ready(function() {
 		};
 
 		var mini_rects = mini_vis.selectAll("rect.mini_bar")
-			.data(data)
+			.data(data);
 
 			//enter
 			mini_rects.enter()
 				.append("mini_svg:rect")
-				.attr("class", "mini_bar")
-				.attr("id", function (d, i) {
-                    return "mini" + d.id
-                })
-				.attr(mini_eventAttrs)
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
@@ -253,8 +249,19 @@ $(document).ready(function() {
 					d3.select(this).classed("mini_selected", true);
                     d3.select("#bar"+d.id).classed("selected", true);
 					return false;
-
 				});
+
+            //update
+			mini_rects
+                .style("opacity", 0)
+				.transition()
+                .style("opacity", 1)
+                    .duration(1000)
+				.attr(mini_eventAttrs)
+				.attr("class", "mini_bar")
+				.attr("id", function (d, i) {
+                    return "mini_bar" + d.id
+                });
 
 			//exit
 			mini_rects.exit()
@@ -262,20 +269,8 @@ $(document).ready(function() {
 				.ease("linear")
 					.attr("height", 0)
 					.duration(1000)
-					.remove()
-
-			//update
-			mini_rects
-				.data(data)
-				.transition()
-				.ease("linear")
-					.duration(1000)
-				.attr(mini_eventAttrs)
-				.attr("class", "mini_bar")
-				.attr("id", function (d, i) {
-                    return "mini_bar" + d.id
-                })
-	};
+					.remove();
+	}
 
 
 	//other

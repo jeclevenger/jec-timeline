@@ -33,21 +33,21 @@ $(document).ready(function() {
 					if (this.id == 11) {
 						plotnames.push(1);
 						plotnames.push(2);
-						setdate = "15 March 2010"
+
 					} else if (this.id == 22) {
 						plotnames.push(3);
-						setdate = "15 March 2005"
+
 					} else if (this.id == 33) {
 						plotnames.push(4);
 						plotnames.push(5);
-						setdate = "15 March 2000"
+
 					} else if (this.id == 44) {
 						plotnames.push(6);
-						setdate = "15 March 1995"
+
 					} else if (this.id == 55) {
 						plotnames.push(7);
 						plotnames.push(8);
-						setdate = "15 March 1990"
+
 					} else {
 
 					}
@@ -107,7 +107,22 @@ $(document).ready(function() {
 
 
 	function plot(data) {
-		timeScale.domain([new Date(setdate), new Date]).nice(d3.time.year).rangeRound([height - margin.bottom, margin.top]);
+        var min_date = d3.min(data, function (d) {
+            temp = new Date(d.start);
+            return temp
+        });
+
+        var max_date = d3.max(data, function (d) {
+            if (d.end == "Current") {
+                temp = new Date;
+                return temp
+            } else {
+                temp = new Date(d.end);
+                return temp
+            }
+        });
+
+		timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([height - margin.bottom, margin.top]);
 		yAxisGroup.transition().ease("linear").duration(500).call(yAxis);
 		var eventAttrs = {
 				x: function (d, i) {
@@ -182,7 +197,22 @@ $(document).ready(function() {
 //////////mini plot
 // mini map bug for axis ticks, not "nicely" rounding the range..margins need to use proper names as well..
 	function mini_plot(data) {
-		mini_timeScale.domain([new Date(setdate), new Date]).nice(d3.time.year).rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
+        var min_date = d3.min(data, function (d) {
+            temp = new Date(d.start);
+            return temp
+        });
+
+        var max_date = d3.max(data, function (d) {
+            if (d.end == "Current") {
+                temp = new Date;
+                return temp
+            } else {
+                temp = new Date(d.end);
+                return temp
+            }
+        });
+
+		mini_timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
 		mini_yAxisGroup.transition().ease("linear").duration(500).call(mini_yAxis)
 
 		var mini_eventAttrs = {

@@ -153,13 +153,7 @@ $(document).ready(function() {
 			.data(data)
 
 			//enter
-			rects.enter()
-				.append("svg:rect")
-				.attr("class", "bar")
-				.attr("id", function (d, i) {
-                    return "bar" + d.id
-                })
-				.attr(eventAttrs)
+			rects.enter().append("svg:rect")
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
@@ -173,25 +167,23 @@ $(document).ready(function() {
 
 				});
 
-			//exit
-			rects.exit()
-				.transition()
-				.ease("linear")
-					.attr("height", 0)
-					.duration(1000)
-					.remove()
-
-			//update
-			rects
-				.data(data)
-				.transition()
+            //update
+			rects.transition()
 				.ease("linear")
 					.duration(1000)
 				.attr(eventAttrs)
 				.attr("class", "bar")
 				.attr("id", function (d, i) {
                     return "bar" + d.id
-                })
+                });
+
+			//exit
+			rects.exit().transition()
+				.ease("linear")
+					.attr("height", 0)
+					.duration(1000)
+					.remove()
+
 	};
 
 //////////mini plot

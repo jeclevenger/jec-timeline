@@ -1,25 +1,36 @@
 
 #svg {
-    margin-left: 330px;
+    margin-left: 5px;
 }
 
-.mini_axis text {
+.mini_axis text { 
     display: none;
 }
 
 #navv {
     background-color: white;
-    width: 300px;
-    position: fixed;
+    width: 330px;
+    padding-right: 10px;
+    height: 1500px;
+    float: left;
+    overflow: scroll;
     margin: 5px;
 }
-
+#testwrapper {
+    padding-top: 1000px;
+    padding-bottom: 1200px;
+}
 #timelineDes {
     border-left: 3px solid #eee;
     padding-left: 2px;
 }
 
 #timelineTitle {
+    border-left: 3px solid #eee;
+    padding-left: 2px;
+}
+
+#timelineenddate, #timelinestartdate {
     border-left: 3px solid #eee;
     padding-left: 2px;
 }

@@ -1,7 +1,28 @@
 {
   "meta": {
     "data set description": "resume data, public vs private, etc",
-    "sets":["Tier 1 Employment","Tier 2 Employment","Tier 3 Employment","Formal Education","Informal Education"]
+    "nav":[
+      {
+        "label": "Tier 1 Employment",
+        "sets": [1, 2]
+      },
+      {
+        "label": "Tier 2 Employment",
+        "sets": [3]
+      },
+      {
+        "label": "Tier 3 Employment",
+        "sets": [4, 5]
+      },
+      {
+        "label": "Formal Education",
+        "sets": [6]
+      },
+      {
+        "label": "Informal Education",
+        "sets": [7, 8]
+      }
+    ]
   },
   "data": [
     {

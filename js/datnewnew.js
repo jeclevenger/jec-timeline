@@ -3,8 +3,21 @@ $(document).ready(function() {
     //maybe pass data as variable since everything is moved inside asynchronous data call
     //added d3 data load to try new data format
     d3.json("data/datnewnew.json", function(error, data) {
-       info = data.data;
+        info = data.data;
+        var min_date = d3.min(info, function (d) {
+            temp = new Date(d.start);
+            return temp
+        });
 
+        var max_date = d3.max(info, function (d) {
+            if (d.end == "Current") {
+                temp = new Date;
+                return temp
+            } else {
+                temp = new Date(d.end);
+                return temp
+            }
+        });
        //svg dims and margin
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
             mini_margin = {top: 2, right: 2, bottom: 2, left: 2},
@@ -27,7 +40,6 @@ $(document).ready(function() {
 	plotnames = []
 		function startFunction() {
 			plotnames = []
-			setdate = ""
 			$('.tier').each(function (index) {
 				if ($(this).find(':first-child').hasClass("glyphicon-ok")) {
 					if (this.id == 11) {
@@ -55,8 +67,7 @@ $(document).ready(function() {
 
 				}
 			});
-		};
-	startFunction();
+		}
 	//plotting
 		var axisPadding = 45;
 		var col_width = 50;
@@ -79,12 +90,12 @@ $(document).ready(function() {
 
 	//scale
 		var timeScale = d3.time.scale()
-			.domain([new Date(setdate), new Date])
+			.domain([min_date, max_date])
 			.nice(d3.time.year)
 			.rangeRound([height - margin.bottom, margin.top]);
 			//might need mini margin
 		var mini_timeScale = d3.time.scale()
-			.domain([new Date(setdate), new Date])
+			.domain([min_date, max_date])
 			.nice(d3.time.year)
 			.rangeRound([mini_width - mini_margin.right, mini_margin.left]);
 	//axis
@@ -107,12 +118,12 @@ $(document).ready(function() {
 
 
 	function plot(data) {
-        var min_date = d3.min(data, function (d) {
+        min_date = d3.min(data, function (d) {
             temp = new Date(d.start);
             return temp
         });
 
-        var max_date = d3.max(data, function (d) {
+        max_date = d3.max(data, function (d) {
             if (d.end == "Current") {
                 temp = new Date;
                 return temp
@@ -121,7 +132,6 @@ $(document).ready(function() {
                 return temp
             }
         });
-
 		timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([height - margin.bottom, margin.top]);
 		yAxisGroup.transition().ease("linear").duration(500).call(yAxis);
 		var eventAttrs = {
@@ -192,12 +202,12 @@ $(document).ready(function() {
 //////////mini plot
 
 	function mini_plot(data) {
-        var min_date = d3.min(data, function (d) {
+        min_date = d3.min(data, function (d) {
             temp = new Date(d.start);
             return temp
         });
 
-        var max_date = d3.max(data, function (d) {
+        max_date = d3.max(data, function (d) {
             if (d.end == "Current") {
                 temp = new Date;
                 return temp
@@ -206,8 +216,7 @@ $(document).ready(function() {
                 return temp
             }
         });
-
-		mini_timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
+        mini_timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
 		mini_yAxisGroup.transition().ease("linear").duration(500).call(mini_yAxis)
 
 		var mini_eventAttrs = {
@@ -296,6 +305,7 @@ $(document).ready(function() {
         plot(findSet(info));
         mini_plot(findSet(info));
 	});
+    startFunction();
 	plot(findSet(info.data));
 	mini_plot(findSet(info.data));
 

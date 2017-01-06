@@ -1,6 +1,6 @@
 
 #svg {
-    margin-left: 330px;
+    margin-left: 5px;
 }
 
 .mini_axis text { 
@@ -9,17 +9,28 @@
 
 #navv {
     background-color: white;
-    width: 300px;
-    position: fixed;
+    width: 330px;
+    padding-right: 10px;
+    height: 1500px;
+    float: left;
+    overflow: scroll;
     margin: 5px;
 }
-
+#testwrapper {
+    padding-top: 750px;
+    padding-bottom: 750px;
+}
 #timelineDes {
     border-left: 3px solid #eee;
     padding-left: 2px;
 }
 
 #timelineTitle {
+    border-left: 3px solid #eee;
+    padding-left: 2px;
+}
+
+#timelineenddate, #timelinestartdate {
     border-left: 3px solid #eee;
     padding-left: 2px;
 }

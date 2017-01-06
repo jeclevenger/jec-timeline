@@ -16,8 +16,6 @@ $(document).ready(function() {
             d3.select("#nav_" + i.toString())
                 .append("span")
                 .text(" " + data.meta.nav[i].label)
-
-
         }
         info = data.data;
         var min_date = d3.min(info, function (d) {
@@ -64,7 +62,7 @@ $(document).ready(function() {
 
                     }
 				} else {
-                    
+
 				}
 			});
 		}
@@ -96,17 +94,17 @@ $(document).ready(function() {
 		var colPadding = 10;
 		var mini_colPadding = 2;
 
-		var events = d3.select("#svg")
-		var mini_events = d3.select("#mini_svg")
+		var events = d3.select("#svg");
+		var mini_events = d3.select("#mini_svg");
 		//might be mini_svg
 		mini_events.append("mini_svg:g")
-			.attr("id", "mini_barchart")
+			.attr("id", "mini_barchart");
 
 		events.append("svg:g")
-			.attr("id", "barchart")
+			.attr("id", "barchart");
 
-		var vis = d3.select("#barchart")
-		var mini_vis = d3.select("#mini_barchart")
+		var vis = d3.select("#barchart");
+		var mini_vis = d3.select("#mini_barchart");
 
 	//scale
 		var timeScale = d3.time.scale()
@@ -189,6 +187,10 @@ $(document).ready(function() {
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
+                    $("h5#timelinestartdate").text(d.start);
+					$("h5#timelinestartdate").css('border-left-color', $(this).css('fill'));
+                    $("h5#timelineenddate").text(d.end);
+					$("h5#timelineenddate").css('border-left-color', $(this).css('fill'));
 					$("p#timelineDes").text(d.description);
                     $("p#timelineDes").css('border-left-color', $(this).css('fill'));
 					d3.selectAll("rect").classed("mini_selected", false);

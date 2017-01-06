@@ -1,9 +1,11 @@
 $(document).ready(function() {
+    $("#navv").scrollTop(1200);
     var info;
     //maybe pass data as variable since everything is moved inside asynchronous data call
     //added d3 data load to try new data format
     d3.json("data/datnewnew.json", function(error, data) {
-        d3.select("#metadata").text(data.meta.data_set_description);
+        d3.select("#metadatatitle").text(data.meta.data_set_title);
+        d3.select("#metadatadescription").text(data.meta.data_set_description);
         var navlength = data.meta.nav.length;
         for (var i = 0; i < navlength; i++) {
             d3.select("#nav").append("h5")
@@ -17,6 +19,7 @@ $(document).ready(function() {
                 .append("span")
                 .text(" " + data.meta.nav[i].label)
         }
+
         info = data.data;
         var min_date = d3.min(info, function (d) {
             var temp = new Date(d.start);
@@ -277,6 +280,10 @@ $(document).ready(function() {
 				.on("click", function (d, i) {
 					$("h5#timelineTitle").text(d.title);
 					$("h5#timelineTitle").css('border-left-color', $(this).css('fill'));
+                    $("h5#timelinestartdate").text(d.start);
+					$("h5#timelinestartdate").css('border-left-color', $(this).css('fill'));
+                    $("h5#timelineenddate").text(d.end);
+					$("h5#timelineenddate").css('border-left-color', $(this).css('fill'));
 					$("p#timelineDes").text(d.description);
 					$("p#timelineDes").css('border-left-color', $(this).css('fill'));
 					d3.selectAll("rect").classed("mini_selected", false);
@@ -311,4 +318,5 @@ $(document).ready(function() {
 	mini_plot(findSet(info.data));
 
     });
+
 });

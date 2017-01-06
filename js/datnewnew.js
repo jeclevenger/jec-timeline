@@ -3,72 +3,92 @@ $(document).ready(function() {
     //maybe pass data as variable since everything is moved inside asynchronous data call
     //added d3 data load to try new data format
     d3.json("data/datnewnew.json", function(error, data) {
+        d3.select("#metadata").text(data.meta.data_set_description);
+        var navlength = data.meta.nav.length;
+        for (var i = 0; i < navlength; i++) {
+            d3.select("#nav").append("h5")
+                .attr("id", "nav_" + i.toString())
+                .attr("class", "tier")
+                .attr("sets", data.meta.nav[i].sets);
+            d3.select("#nav_" + i.toString())
+                .append("span")
+                .attr("class", "glyphicon glyphicon-ok tier_span");
+            d3.select("#nav_" + i.toString())
+                .append("span")
+                .text(" " + data.meta.nav[i].label)
+
+
+        }
         info = data.data;
         var min_date = d3.min(info, function (d) {
-            temp = new Date(d.start);
+            var temp = new Date(d.start);
             return temp
         });
 
         var max_date = d3.max(info, function (d) {
             if (d.end == "Current") {
-                temp = new Date;
+                var temp = new Date;
                 return temp
             } else {
-                temp = new Date(d.end);
+                var temp = new Date(d.end);
                 return temp
             }
         });
-       //svg dims and margin
+        //svg dims and margin
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
             mini_margin = {top: 2, right: 2, bottom: 2, left: 2},
 			width = 600,
 			height = 1500,
 			mini_width = 300,
 			mini_height = 144;
-	//create svg
-		svg = d3.select("#timeline").append("svg").attr({
+	    //create svg
+		var svg = d3.select("#timeline").append("svg").attr({
 			width: width,
 			height: height,
 			id: "svg"
 		});
-		mini_svg = d3.select("#mini_timeline").append("svg").attr({
+		var mini_svg = d3.select("#mini_timeline").append("svg").attr({
 			width: mini_width,
 			height: mini_height,
 			id: "mini_svg"
 		});
-	//function for scale
-	plotnames = []
+	    //function for scale
+	    var plotnames = [];
 		function startFunction() {
-			plotnames = []
+            plotnames = [];
 			$('.tier').each(function (index) {
-				if ($(this).find(':first-child').hasClass("glyphicon-ok")) {
-					if (this.id == 11) {
-						plotnames.push(1);
-						plotnames.push(2);
+				if ($(this).find('span').hasClass("glyphicon-ok")) {
+                    var topush = JSON.parse("[" + $(this).attr("sets") + "]");
+                    for (i = 0; i < topush.length; i++) {
+                        plotnames.push(topush[i])
 
-					} else if (this.id == 22) {
-						plotnames.push(3);
-
-					} else if (this.id == 33) {
-						plotnames.push(4);
-						plotnames.push(5);
-
-					} else if (this.id == 44) {
-						plotnames.push(6);
-
-					} else if (this.id == 55) {
-						plotnames.push(7);
-						plotnames.push(8);
-
-					} else {
-
-					}
+                    }
 				} else {
-
+                    
 				}
 			});
 		}
-	//plotting
+        //other
+        function findSet(){
+            var inputdata = [];
+            plotnames.forEach(function(entry) {
+                 setcut = $.grep(info, function(n, i){
+                    return n.set == entry
+                });
+                inputdata = inputdata.concat(setcut)
+            });
+            return inputdata
+        }
+        //nav on click
+        $(".tier").click(function() {
+            //$( "#tier_" + this.id + "_span" ).toggleClass('glyphicon-ok glyphicon-remove');
+            $( this ).find(":first-child").toggleClass('glyphicon-ok glyphicon-remove');
+
+            startFunction();
+            plot(findSet(info));
+            mini_plot(findSet(info));
+        });
+	    //plotting
 		var axisPadding = 45;
 		var col_width = 50;
 		var mini_col_width = 12;
@@ -284,27 +304,6 @@ $(document).ready(function() {
 					.remove();
 	}
 
-
-	//other
-	function findSet(){
-		var inputdata = [];
-		plotnames.forEach(function(entry) {
-			 setcut = $.grep(info, function(n, i){
-				return n.set == entry
-			});
-			inputdata = inputdata.concat(setcut)
-		});
-		return inputdata
-	};
-
-
-	$(".tier").click(function() {
-		$( "#tier_" + this.id + "_span" ).toggleClass('glyphicon-ok glyphicon-remove');
-
-		startFunction();
-        plot(findSet(info));
-        mini_plot(findSet(info));
-	});
     startFunction();
 	plot(findSet(info.data));
 	mini_plot(findSet(info.data));

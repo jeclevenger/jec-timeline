@@ -14,7 +14,7 @@ $(document).ready(function() {
     //added d3 data load to try new data format
     //todo connect math for sizing and text, scroll top, etc
     function loadData(datafilename) {
-            d3.json("data/" + datafilename + ".json", function(error, data) {
+            d3.json(datafilename, function(error, data) {
                 d3.select("#metadatatitle").text(data.meta.data_set_title);
                 d3.select("#metadatadescription").text(data.meta.data_set_description);
                 var navlength = data.meta.nav.length;
@@ -351,5 +351,5 @@ $(document).ready(function() {
     }
     //todo fix titles, for example auto generate in html or somewhere based on file name?
     $("#currentdataset").text("example");
-    loadData("example")
+    loadData("/static/static-sites/jec-timeline/data/example.json")
 });

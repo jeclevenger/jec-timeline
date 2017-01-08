@@ -1,14 +1,15 @@
 $(document).ready(function() {
     $("ul.dropdown-menu a").click(function() {
-        loadData($(this).attr("title"))
+        loadData($(this).attr("title"));
         //todo fix titles, for example auto generate in html or somewhere based on file name?
         $("#currentdataset").text($(this).text());
     });
 
-    $("#navv").scrollTop(1200);
+    $("#navv").scrollTop(1000);
     var info;
     //maybe pass data as variable since everything is moved inside asynchronous data call
     //added d3 data load to try new data format
+    //todo connect math for sizing and text, scroll top, etc
     function loadData(datafilename) {
             d3.json("data/" + datafilename + ".json", function(error, data) {
                 d3.select("#metadatatitle").text(data.meta.data_set_title);
@@ -51,7 +52,7 @@ $(document).ready(function() {
                     width = 600,
                     height = 1500,
                     mini_width = 300,
-                    mini_height = 160;
+                    mini_height = 200;
                 //create svg
                 var svg = d3.select("#timeline").append("svg").attr({
                     width: width,
@@ -150,14 +151,6 @@ $(document).ready(function() {
                         transform: "translate(" + [0, (mini_height-margin.bottom - mini_axisPadding)] + ")"
                     })
                     .call(mini_yAxis);
-                mini_svg
-                    .selectAll("text")
-                        .style("text-anchor", "end")
-                        .attr("dx", "-2.0em")
-                        .attr("dy", "-0.15em")
-                        .attr("transform", function(d) {
-                            return "translate(-12,0) rotate(-90)"
-                            });
 
 
             function plot(data) {
@@ -264,7 +257,7 @@ $(document).ready(function() {
                     }
                 });
                 mini_timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([mini_width - mini_margin.bottom, mini_margin.top]);
-                mini_yAxisGroup.transition().ease("linear").duration(500).call(mini_yAxis)
+                mini_yAxisGroup.transition().ease("linear").duration(500).call(mini_yAxis);
 
                 var mini_eventAttrs = {
                         x: function (d, i) {
@@ -333,6 +326,15 @@ $(document).ready(function() {
                             .attr("width", 0)
                             .duration(1000)
                             .remove();
+
+                mini_svg
+                    .selectAll("text")
+                        .style("text-anchor", "end")
+                        .attr("dx", "-0.8em")
+                        .attr("dy", "-0.0em")
+                        .attr("transform", function(d) {
+                            return "translate(-5,0) rotate(-90)"
+                            });
             }
 
             startFunction();

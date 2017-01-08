@@ -9,23 +9,24 @@
   <body style="cursor: default;">
     <div class="container" style="width: 960px;">
     <h2><a href="http://www.jeclevenger.com/static-sites/jec-timeline/">jec-timeline</a> <span style="float: right">v0.0.7</span></h2>
-    <h4>code found on <a href="https://github.com/Casl-Media/jec-timeline">GitHub</a></h4>
-    <hr>
-    <div class="btn-group">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Select Data Set <span style="padding-left: 1em; padding-right: 1em;">|</span> active: <span id="currentdataset" style="padding-left: 1em; padding-right: 2em;"></span><span class="caret"></span>
+    <h4 style="display: inline-block;">code found on <a href="https://github.com/Casl-Media/jec-timeline">GitHub</a></h4>
+    <div style="display: inline-block; float: right;" class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle databutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <span id="databuttontext">active:</span> <span id="currentdataset" style="padding-left: 1em; padding-right: 2em;"></span><span id="buttoncaret" class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
+      <ul id="databuttondropdown" class="dropdown-menu">
         <li><a href="#" title="datnewnew">jec-resum&eacute;</a></li>
         <li><a href="#" title="datnewnew2">example with altered nav</a></li>
       </ul>
     </div>
+    <hr>
     <h3 id="metadatatitle"></h3>
     <div id="metadatadescription" style="padding-bottom: 2em;"></div>
     <div id="timeline" style="width: 960px;">
         <div id="navv" >
             <div id="testwrapper">
-                <h4>Timeline Navigation:</h4>
+                <h2 id="guiheader">Timeline Navigation</h2>
+                <h4>Display Options:</h4>
                 <div id="nav"></div>
                 <div id="mini_timeline"></div>
                 <h4>Timeline Event Information:</h4>

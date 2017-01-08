@@ -2,13 +2,29 @@
 #svg {
     margin-left: 5px;
 }
-.mini_axis {
-
+#mini_timeline {
+    padding-bottom: 2em;
 }
 .mini_axis text { 
 
 }
+.databutton {
+    min-width: 300px;
+    text-align: right;
+}
+#databuttontext {
+    float: left;
+}
+#currentdataset {
+    margin-left: 1em;
+    float: left;
+}
+#buttoncaretwrapper {
 
+}
+#databuttondropdown {
+    width: 400px;
+}
 #navv {
     background-color: white;
     width: 330px;
@@ -21,6 +37,9 @@
 #testwrapper {
     padding-top: 1000px;
     padding-bottom: 1200px;
+}
+#guiheader {
+    padding-bottom: 1em;
 }
 #timelineDes {
     border-left: 3px solid #eee;

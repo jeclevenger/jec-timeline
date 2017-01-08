@@ -2,9 +2,11 @@
 #svg {
     margin-left: 5px;
 }
+.mini_axis {
 
+}
 .mini_axis text { 
-    display: none;
+
 }
 
 #navv {

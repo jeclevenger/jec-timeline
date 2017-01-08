@@ -47,11 +47,11 @@ $(document).ready(function() {
                 });
                 //svg dims and margin
                 var margin = {top: 20, right: 20, bottom: 20, left: 20},
-                    mini_margin = {top: 2, right: 2, bottom: 2, left: 2},
+                    mini_margin = {top: 5, right: 5, bottom: 5, left: 5},
                     width = 600,
                     height = 1500,
                     mini_width = 300,
-                    mini_height = 144;
+                    mini_height = 160;
                 //create svg
                 var svg = d3.select("#timeline").append("svg").attr({
                     width: width,
@@ -101,6 +101,8 @@ $(document).ready(function() {
                 });
                 //plotting
                 var axisPadding = 45;
+                var mini_axisPadding = 20;
+                // added mini_axisPadding todo add math to connect it with font size, add to gui
                 var col_width = 50;
                 var mini_col_width = 12;
                 var counter = 0;
@@ -140,12 +142,22 @@ $(document).ready(function() {
                     "class": "axis",
                     transform: "translate(" + [axisPadding, 0] + ")"
                     }).call(yAxis);
-                    //might need custom mini axis padding
-                var mini_yAxisGroup = mini_svg.append("g").attr({
-                    "class": "mini_axis",
-                    transform: "translate(" + [0, (mini_height-margin.bottom)] + ")"
-                    }).call(mini_yAxis);
 
+                var mini_yAxisGroup = mini_svg.append("g")
+                    .attr({
+                        "class": "mini_axis",
+                        "font-size": "0.75em",
+                        transform: "translate(" + [0, (mini_height-margin.bottom - mini_axisPadding)] + ")"
+                    })
+                    .call(mini_yAxis);
+                mini_svg
+                    .selectAll("text")
+                        .style("text-anchor", "end")
+                        .attr("dx", "-2.0em")
+                        .attr("dy", "-0.15em")
+                        .attr("transform", function(d) {
+                            return "translate(-12,0) rotate(-90)"
+                            });
 
 
             function plot(data) {
@@ -263,7 +275,7 @@ $(document).ready(function() {
                             }
                         },
                         y: function (d, i) {
-                            return mini_height - (mini_col_width * (d.set + 1) + mini_colPadding * d.set + mini_col_width )
+                            return mini_height - (mini_col_width * (d.set + 1) + mini_colPadding * d.set + mini_col_width + mini_axisPadding )
                         },
                         width: function (d, i) {
                                 if (d.end == "Current") {

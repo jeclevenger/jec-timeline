@@ -6,6 +6,7 @@ $(document).ready(function() {
     });
     $(".jumbotoggle").click(function() {
        $(".jumbotron").remove()
+        $("html,body").scrollTop(0);
     });
     $("#navv").scrollTop(1000);
     var info;

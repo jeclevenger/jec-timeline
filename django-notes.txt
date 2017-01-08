@@ -1,0 +1,5 @@
+html needs adjustment with django template language for static files (js/css)
+
+datenewnew.js
+-d3.json expects a different argument versus static-file. static file url must be done in template language and thus the full path is passed as the argument instead of only the file name
+-initial load at bottom of the page needs adjustment based on d3.json args

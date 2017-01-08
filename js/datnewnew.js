@@ -345,6 +345,8 @@ $(document).ready(function() {
             mini_plot(findSet(info.data));
 
         });
+        $("#navv").scrollTop(1000);
+        // scroll top already done ...because elements are erased? $("#jec-timeline-header").scrollTop(0);
     }
     //todo fix titles, for example auto generate in html or somewhere based on file name?
     $("#currentdataset").text("example");

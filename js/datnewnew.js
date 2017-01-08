@@ -47,12 +47,13 @@ $(document).ready(function() {
                     }
                 });
                 //svg dims and margin
+                //todo connnect column width and and width setting math..its sized for available data sets currently
                 var margin = {top: 20, right: 20, bottom: 20, left: 20},
                     mini_margin = {top: 5, right: 5, bottom: 5, left: 5},
                     width = 600,
                     height = 1500,
                     mini_width = 300,
-                    mini_height = 150;
+                    mini_height = 160;
                 //create svg
                 var svg = d3.select("#timeline").append("svg").attr({
                     width: width,

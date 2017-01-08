@@ -16,14 +16,14 @@
     float: left;
 }
 #currentdataset {
-    margin-left: 1em;
+
     float: left;
 }
 #buttoncaretwrapper {
 
 }
 #databuttondropdown {
-    width: 400px;
+    min-width: 300px;
 }
 #navv {
     background-color: white;
@@ -38,8 +38,8 @@
     padding-top: 1000px;
     padding-bottom: 1200px;
 }
-#guiheader {
-    padding-bottom: 1em;
+.guiheader {
+    padding-top: 2em;
 }
 #timelineDes {
     border-left: 3px solid #eee;

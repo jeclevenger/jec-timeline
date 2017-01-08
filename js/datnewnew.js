@@ -52,7 +52,7 @@ $(document).ready(function() {
                     width = 600,
                     height = 1500,
                     mini_width = 300,
-                    mini_height = 200;
+                    mini_height = 150;
                 //create svg
                 var svg = d3.select("#timeline").append("svg").attr({
                     width: width,

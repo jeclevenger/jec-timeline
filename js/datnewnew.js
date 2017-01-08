@@ -4,7 +4,9 @@ $(document).ready(function() {
         //todo fix titles, for example auto generate in html or somewhere based on file name?
         $("#currentdataset").text($(this).text());
     });
-
+    $(".jumbotoggle").click(function() {
+       $(".jumbotron").remove()
+    });
     $("#navv").scrollTop(1000);
     var info;
     //maybe pass data as variable since everything is moved inside asynchronous data call
@@ -345,6 +347,6 @@ $(document).ready(function() {
         });
     }
     //todo fix titles, for example auto generate in html or somewhere based on file name?
-    $("#currentdataset").text("example with altered nav");
-    loadData("datnewnew2")
+    $("#currentdataset").text("example");
+    loadData("example")
 });

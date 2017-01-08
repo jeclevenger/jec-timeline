@@ -11,11 +11,48 @@
         <div class="jumbotron">
             <h1>jec-timeline</h1>
             <p>a tool for exploring timeline data structures</p>
-            <button type="button" class="btn btn-primary jumbotoggle" style="margin-top: 3em;">Press this button to hide this section and start using jec-timeline</button>
+            <button type="button" class="btn btn-primary jumbotoggle jumbolist" style="margin-top: 3em;">Press this button to hide this section and start using jec-timeline</button>
+            <h2 class="guiheader">Development</h2>
+            <ul class="jumbolist">
+                <li>
+                    <a href="#" class="jumbotoggle">jec-timeline current version</a>
+                </li>
+                <li>
+                    <a href="datnewnew.html">jec-timeline v0.0.7</a>
+                </li>
+                <li>
+                    <a href="jeclevenger.html">jec-timeline v0.0.6</a>
+                </li>
+                <li>
+                    <a href="jeclevenger-old.html">jec-timeline v0.0.5</a>
+                </li>
+                <li>
+                    <a href="original.html">jec-timeline v0.0.4</a>
+                </li>
+                <li>
+                    <a href="plannedworkflow.html">planned workflow for v0.1.0</a>
+                </li>
+            </ul>
+            <h2 class="guiheader">Currently built with</h2>
+            <ul class="jumbolist">
+                <li>HTML, CSS, JavaScript</li>
+                <li>
+                    <a target="_blank" href="https://d3js.org/">D3.js</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jquery.com/">jQuery</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.json.org/">JSON</a>
+                </li>
+            </ul>
             <h2 class="guiheader">The JSON outline</h2>
             <p>Visualize your own data, all you need to do is put it in the correct format.</p>
-            <p><code>meta</code> contains information about the data set and how it should function with the GUI.
-                <code>data</code> contains the records with individualized meta data.</p>
+            <p><code>meta</code> contains information about the data set and how it should function within the GUI.
+                <br><code>data</code> contains the records with individualized meta data.</p>
             <pre><code>
                 {
                   "meta": {},
@@ -23,46 +60,54 @@
                 }
             </code></pre>
             <br>
-            <p>The data structure is in development but currently the GUI functions based on the name-value pairs below.
-            </p>
+            <br>
+            <p>The data structure is in development, currently the GUI operates using the name-value pairs below.</p>
             <ul>
-                <li>
-                    <code>meta.data_set_title</code>: title for GUI header
+                <li><code>meta</code>
+                    <ul>
+                        <li>
+                            <code>meta.data_set_title</code>: title for GUI header
+                        </li>
+                        <li>
+                            <code>meta.data_set_description</code>: description of data set (planned to become an array to handle multiple paragraphs)
+                        </li>
+                        <li>
+                            <code>meta.nav.label</code>: Display Option label in GUI (legend label)
+                        </li>
+                        <li>
+                            <code>meta.nav.sets</code>: Linked sets of records for visibility toggling when Display Option is selected
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <code>meta.data_set_description</code>: description of data set (planned to become an array to handle multiple paragraphs)
-                </li>
-                <li>
-                    <code>meta.nav.label</code>: Display Option label in GUI (legend title)
-                </li>
-                <li>
-                    <code>meta.nav.label</code>: Linked sets of records for visibility toggling when Display Option is selected
-                </li>
-                <li>
-                    <code>data.id</code>: record&#47;node id index
-                </li>
-                <li>
-                    <code>data.title</code>: record title for display
-                </li>
-                <li>
-                    <code>data.start</code>: event start time (handled by <a href="http://www.w3schools.com/js/js_date_formats.asp">JavaScript Date</a>)
-                </li>
-                <li>
-                    <code>data.end</code>: event end time (handled by <a href="http://www.w3schools.com/js/js_date_formats.asp">JavaScript Date</a>)
-                </li>
-                <li>
-                    <code>data.set</code>: associated set for record (planned to become an array to handle multiple sets)
-                </li>
-                <li>
-                    <code>data.description</code>: event description for display
-                </li>
-                <li>
-                    <code>data.color</code>: event fill color (handled by <a href="http://www.w3schools.com/html/html_colors.asp">HTML</a>)
+                <li><code>data</code>
+                    <ul>
+                        <li>
+                            <code>data.id</code>: record&#47;node id index
+                        </li>
+                        <li>
+                            <code>data.title</code>: record title for display
+                        </li>
+                        <li>
+                            <code>data.start</code>: event start time (handled by <a href="http://www.w3schools.com/js/js_date_formats.asp">JavaScript Date</a>)
+                        </li>
+                        <li>
+                            <code>data.end</code>: event end time (handled by <a href="http://www.w3schools.com/js/js_date_formats.asp">JavaScript Date</a>)
+                        </li>
+                        <li>
+                            <code>data.set</code>: associated set for record (planned to become an array to handle multiple sets)
+                        </li>
+                        <li>
+                            <code>data.description</code>: event description for display
+                        </li>
+                        <li>
+                            <code>data.color</code>: event fill color (handled by <a href="http://www.w3schools.com/html/html_colors.asp">HTML</a>)
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <p>
                 <code>nav</code> contains the list of Display Options (basically an interactive legend).
-                <code>sets</code> in <code>meta.nav</code> and <code>set</code> in <code>data</code> correspond.
+                <br><code>sets</code> in <code>meta.nav</code> and <code>set</code> in <code>data</code> correspond.
             </p>
             <pre><code>
                 {
@@ -90,7 +135,8 @@
                 }
             </code></pre>
             <br>
-            <p>Example data set displayed below</p>
+            <br>
+            <p>Example data set displayed below (example.json)</p>
             <pre><code>
                 {
                   "meta": {
@@ -157,26 +203,13 @@
                 }
             </code></pre>
             <br>
+            <br>
             <p>You can download the repo and visualize locally or submit a data set to the repo via GitHub pull request.</p>
             <p>Scroll down to see examples.</p>
-            <h2 class="guiheader">Currently built with</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>
-                    <a target="_blank" href="https://d3js.org/">D3.js</a>
-                </li>
-                <li>
-                    <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://jquery.com/">jQuery</a>
-                </li>
-                <li>
-                    <a target="_blank" href="http://www.json.org/">JSON</a>
-                </li>
-            </ul>
+            <h2 class="guiheader">To-do</h2>
+            <p>To-do page coming soon, they are sprinkled throughout the code. Some are prefaced by a 'todo' tag.</p>
             <h2 class="guiheader">Inspired by</h2>
-            <ul>
+            <ul class="jumbolist">
                 <li>
                     <a target="_blank" href="https://github.com/jiahuang/d3-timeline">https://github.com/jiahuang/d3-timeline</a>
                 </li>
@@ -187,30 +220,7 @@
                     <a target="_blank" href="http://colorbrewer2.org/">http://colorbrewer2.org/</a>
                 </li>
             </ul>
-            <h2 class="guiheader">To-do</h2>
-            <p>To-do page coming soon, they are sprinkled throughout the code. Some are prefaced by a 'todo' tag.</p>
-            <h2 class="guiheader">Development timelines</h2>
-            <ul>
-                <li>
-                    <a href="#jec-timeline-header">jec-timeline current version</a>
-                </li>
-                <li>
-                    <a href="datnewnew.html">jec-timeline v0.0.7</a>
-                </li>
-                <li>
-                    <a href="jeclevenger.html">jec-timeline v0.0.6</a>
-                </li>
-                <li>
-                    <a href="jeclevenger-old.html">jec-timeline v0.0.5</a>
-                </li>
-                <li>
-                    <a href="original.html">jec-timeline v0.0.4</a>
-                </li>
-                <li>
-                    <a href="plannedworkflow.html">planned workflow for v0.1.0</a>
-                </li>
-            </ul>
-            <button type="button" class="btn btn-primary jumbotoggle" style="margin-top: 2em;">Press this button to hide this section and start using jec-timeline</button>
+            <button type="button" class="btn btn-primary jumbotoggle jumbolist" style="margin-top: 2em;">Press this button to hide this section and start using jec-timeline</button>
         </div>
     </div>
     <div class="container" style="width: 960px; padding-bottom: 2em;">

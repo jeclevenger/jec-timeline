@@ -1,5 +1,5 @@
-.jumbotron li {
-    font-size:1.5em;
+.jumbolist {
+    font-size: 1.5em;
 }
 #svg {
     margin-left: 5px;
@@ -9,9 +9,6 @@
 }
 .mini_axis text { 
 
-}
-.jumbotoggle {
-    font-size: 1.5em;
 }
 .databutton {
     min-width: 300px;

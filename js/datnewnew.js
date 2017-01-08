@@ -5,7 +5,7 @@ $(document).ready(function() {
         $("#currentdataset").text($(this).text());
     });
     $(".jumbotoggle").click(function() {
-       $(".jumbotron").remove()
+        $(".jumbotron").remove();
         $("html,body").scrollTop(0);
     });
     $("#navv").scrollTop(1000);

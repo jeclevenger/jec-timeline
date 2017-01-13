@@ -1,7 +1,28 @@
+function someFunction(site)
+{
+    // http://stackoverflow.com/questions/6680825/return-string-without-trailing-slash
+    return site.replace(/\/$/, "");
+}
+var qs = (function(a) {
+    // http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=', 2);
+        if (p.length == 1)
+            b[p[0]] = "";
+        else
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+
 $(document).ready(function() {
     $("ul.dropdown-menu a").click(function() {
         loadData($(this).attr("title"));
         //todo fix titles, for example auto generate in html or somewhere based on file name?
+        // todo finish this now that data load is based on url, move into plotting loop
         $("#currentdataset").text($(this).text());
     });
     $(".jumbotoggle").click(function() {
@@ -350,6 +371,10 @@ $(document).ready(function() {
         // scroll top already done ...because elements are erased? $("#jec-timeline-header").scrollTop(0);
     }
     //todo fix titles, for example auto generate in html or somewhere based on file name?
-    $("#currentdataset").text("example");
-    loadData("example")
+    if (qs['v'] == undefined) {
+        $("#currentdataset").text("example");
+        loadData("example")
+    }
+    $("#currentdataset").text(someFunction(qs["v"]));
+    loadData(someFunction(qs["v"]))
 });

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>jec-timeline</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datnewnew.css" rel="stylesheet">
+
+  </head>
+  <body style="cursor: default;">
+        <div class="container" style="padding-top: 2em;">
+        <div class="jumbotron" style="width: 100%;">
+            <h1><a href="http://www.jeclevenger.com/static-site/jec-timeline/" style="color: inherit;">jec-timeline</a></h1>
+            <p>a tool for exploring timeline data structures</p>
+            <h2 class="guiheader">Development</h2>
+            <ul class="jumbolist">
+                <li>
+                    <a href="http://www.jeclevenger.com/static-site/jec-timeline/">jec-timeline current version</a>
+                </li>
+                <li>
+                    <a href="datnewnew.html">jec-timeline v0.0.7</a>
+                </li>
+                <li>
+                    <a href="jeclevenger.html">jec-timeline v0.0.6</a>
+                </li>
+                <li>
+                    <a href="jeclevenger-old.html">jec-timeline v0.0.5</a>
+                </li>
+                <li>
+                    <a href="original.html">jec-timeline v0.0.4</a>
+                </li>
+                <li>
+                    <a href="plannedworkflow.html">planned workflow for v0.1.0</a>
+                </li>
+            </ul>
+            <h2 class="guiheader">Currently built with</h2>
+            <ul class="jumbolist">
+                <li>HTML, CSS, JavaScript</li>
+                <li>
+                    <a target="_blank" href="https://d3js.org/">D3.js</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jquery.com/">jQuery</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.json.org/">JSON</a>
+                </li>
+            </ul>
+            <h2 class="guiheader">The JSON outline</h2>
+            <p>Visualize your own data, all you need to do is put it in the correct format.</p>
+            <p><code>meta</code> contains information about the data set and how it should function within the GUI.
+                <br><code>data</code> contains the records with individualized meta data.</p>
+            <pre><code>
+        {
+        "meta": {},
+        "data": []
+        }
+            </code></pre>
+            <br>
+            <br>
+            <p>The data structure is in development, currently the GUI operates using the name-value pairs below.</p>
+            <ul>
+                <li><code>meta</code>
+                    <ul>
+                        <li>
+                            <code>meta.data_set_title</code>: title for GUI header
+                        </li>
+                        <li>
+                            <code>meta.data_set_description</code>: description of data set (planned to become an array to handle multiple paragraphs)
+                        </li>
+                        <li>
+                            <code>meta.nav.label</code>: Display Option label in GUI (legend label)
+                        </li>
+                        <li>
+                            <code>meta.nav.sets</code>: Linked sets of records for visibility toggling when Display Option is selected
+                        </li>
+                    </ul>
+                </li>
+                <li><code>data</code>
+                    <ul>
+                        <li>
+                            <code>data.id</code>: record&#47;node id index
+                        </li>
+                        <li>
+                            <code>data.title</code>: record title for display
+                        </li>
+                        <li>
+                            <code>data.start</code>: event start time (handled by <a href="http://www.w3schools.com/js/js_date_formats.asp">JavaScript Date</a>)
+                        </li>
+                        <li>
+                            <code>data.end</code>: event end time (handled by <a href="http://www.w3schools.com/js/js_date_formats.asp">JavaScript Date</a>)
+                        </li>
+                        <li>
+                            <code>data.set</code>: associated set for record (planned to become an array to handle multiple sets)
+                        </li>
+                        <li>
+                            <code>data.description</code>: event description for display
+                        </li>
+                        <li>
+                            <code>data.color</code>: event fill color (handled by <a href="http://www.w3schools.com/html/html_colors.asp">HTML</a>)
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                <code>nav</code> contains the list of Display Options (basically an interactive legend).
+                <br><code>sets</code> in <code>meta.nav</code> and <code>set</code> in <code>data</code> correspond.
+            </p>
+            <pre><code>
+        {
+        "meta": {
+        "data_set_title": "",
+        "data_set_description": "",
+        "nav":[
+        {
+        "label": "",
+        "sets": [0]
+        }
+        ]
+        },
+        "data": [
+        {
+        "id": 0,
+        "title": "",
+        "start": "",
+        "end": "",
+        "set": 0,
+        "description": "",
+        "color": ""
+        }
+        ]
+        }
+          </code></pre>
+          <br>
+          <br>
+          <p>Example data set displayed below (example.json)</p>
+          <pre><code>
+        {
+        "meta": {
+        "data_set_title": "Example data set reference in index.html",
+        "data_set_description": "This is a description of the data set, some meta data. Maybe explaining how it was created, why, etc.",
+        "nav":[
+        {
+        "label": "the first display option",
+        "sets": [2]
+        },
+        {
+        "label": "the second display option",
+        "sets": [1,3]
+        }
+        ]
+        },
+        "data": [
+        {
+        "id": 0,
+        "title": "Example Event",
+        "start": "01 June 2000",
+        "end": "15 August 2003",
+        "set": 1,
+        "description": "First event in this example",
+        "color": "#d4b9da"
+        },
+        {
+        "id": 1,
+        "title": "2nd example vent",
+        "start": "01 July 1998",
+        "end": "01 August 2001",
+        "set": 2,
+        "description": "the 2nd event in this example",
+        "color": "#d4b9da"
+        },
+        {
+        "id": 2,
+        "title": "event",
+        "start": "01 June 2002",
+        "end": "15 August 2003",
+        "set": 3,
+        "description": "event description",
+        "color": "#d4b9da"
+        },
+        {
+        "id": 3,
+        "title": "event",
+        "start": "01 June 2003",
+        "end": "15 August 2004",
+        "set": 3,
+        "description": "event description",
+        "color": "#ce1256"
+        },
+        {
+        "id": 5,
+        "title": "event",
+        "start": "01 June 2006",
+        "end": "15 August 2008",
+        "set": 3,
+        "description": "event description",
+        "color": "#6baed6"
+        }
+        ]
+        }
+            </code></pre>
+            <br>
+            <br>
+            <p>You can download the repo and visualize locally or submit a data set to the repo via GitHub pull request.</p>
+            <p>Scroll down to see examples.</p>
+            <h2 class="guiheader">To-do</h2>
+            <p>To-do page coming soon, they are sprinkled throughout the code. Some are prefaced by a 'todo' tag.</p>
+            <h2 class="guiheader">Inspired by</h2>
+            <ul class="jumbolist">
+                <li>
+                    <a target="_blank" href="https://github.com/jiahuang/d3-timeline">https://github.com/jiahuang/d3-timeline</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://codepen.io/chris-creditdesign/pen/yuFjr">http://codepen.io/chris-creditdesign/pen/yuFjr</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://colorbrewer2.org/">http://colorbrewer2.org/</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src='js/d3.min.js'></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+	<script src="js/jec-timeline.js"></script>
+
+    </body>
+</html>

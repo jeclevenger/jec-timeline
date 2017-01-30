@@ -1,3 +1,5 @@
+//todo auto generate dropdown based on folder full of file names
+
 function someFunction(site) {
     // http://stackoverflow.com/questions/6680825/return-string-without-trailing-slash
     return site.replace(/\/$/, "");
@@ -18,7 +20,7 @@ var qs = (function(a) {
 })(window.location.search.substr(1).split('&'));
 
 $(document).ready(function() {
-
+    /*
     $("ul.dropdown-menu a").click(function() {
         loadData($(this).attr("title"));
         //todo fix titles, for example auto generate in html or somewhere based on file name?
@@ -29,6 +31,7 @@ $(document).ready(function() {
         $(".jumbotron").remove();
         $("html,body").scrollTop(0);
     });
+    */
     $("#navv").scrollTop(1000);
     var info;
     //maybe pass data as variable since everything is moved inside asynchronous data call
@@ -69,6 +72,9 @@ $(document).ready(function() {
                         var temp = new Date(d.end);
                         return temp
                     }
+                });
+                var max_set = d3.max(info, function (d) {
+                    return d.set
                 });
                 //svg dims and margin
                 //todo connnect column width and and width setting math..its sized for available data sets currently
@@ -129,11 +135,14 @@ $(document).ready(function() {
                 var axisPadding = 45;
                 var mini_axisPadding = 20;
                 // added mini_axisPadding todo add math to connect it with font size, add to gui
-                var col_width = 50;
-                var mini_col_width = 12;
+
                 var counter = 0;
                 var colPadding = 10;
                 var mini_colPadding = 2;
+                //var col_width = 50;
+                var col_width = width / (max_set+2) - colPadding*2;
+                //var mini_col_width = 12;
+                var mini_col_width = mini_height / (max_set+3) - mini_colPadding*2;
 
                 var events = d3.select("#svg");
                 var mini_events = d3.select("#mini_svg");
@@ -193,6 +202,8 @@ $(document).ready(function() {
                         return temp
                     }
                 });
+
+
                 timeScale.domain([min_date, max_date]).nice(d3.time.year).rangeRound([height - margin.bottom, margin.top]);
                 yAxisGroup.transition().ease("linear").duration(500).call(yAxis);
                 var eventAttrs = {
@@ -293,7 +304,7 @@ $(document).ready(function() {
                             }
                         },
                         y: function (d, i) {
-                            return mini_height - (mini_col_width * (d.set + 1) + mini_colPadding * d.set + mini_col_width + mini_axisPadding )
+                            return mini_height - (mini_col_width * (d.set + 1) + mini_colPadding * d.set + mini_col_width + mini_colPadding + mini_axisPadding )
                         },
                         width: function (d, i) {
                                 if (d.end == "Current") {
@@ -370,12 +381,11 @@ $(document).ready(function() {
         $("#navv").scrollTop(1000);
         // scroll top already done ...because elements are erased? $("#jec-timeline-header").scrollTop(0);
     }
-    //todo fix titles, for example auto generate in html or somewhere based on file name?
     if (qs['v'] == undefined) {
-        $("#currentdataset").text("example");
+        $("#currentdataset").text("example.json");
         loadData("example")
     } else {
-        $("#currentdataset").text(someFunction(qs["v"]));
+        $("#currentdataset").text(someFunction(qs["v"]) + ".json");
         loadData(someFunction(qs["v"]))
     }
 

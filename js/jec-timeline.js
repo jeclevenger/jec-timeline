@@ -74,7 +74,7 @@ $(document).ready(function() {
                     }
                 });
                 var max_set = d3.max(info, function (d) {
-                    return d.set
+                    return d.column
                 });
                 //svg dims and margin
                 //todo connnect column width and and width setting math..its sized for available data sets currently
@@ -208,7 +208,7 @@ $(document).ready(function() {
                 yAxisGroup.transition().ease("linear").duration(500).call(yAxis);
                 var eventAttrs = {
                         x: function (d, i) {
-                            return col_width * (d.set - 1) + colPadding * d.set + axisPadding
+                            return col_width * d.column + colPadding * d.column + axisPadding + colPadding
                         },
                         y: function (d, i) {
                             if (d.end == "Current") {
@@ -304,7 +304,7 @@ $(document).ready(function() {
                             }
                         },
                         y: function (d, i) {
-                            return mini_height - (mini_col_width * (d.set + 1) + mini_colPadding * d.set + mini_col_width + mini_colPadding + mini_axisPadding )
+                            return mini_height - (mini_col_width * d.column + mini_colPadding * d.column + mini_col_width + mini_colPadding + mini_axisPadding + margin.bottom )
                         },
                         width: function (d, i) {
                                 if (d.end == "Current") {

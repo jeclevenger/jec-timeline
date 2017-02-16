@@ -22,6 +22,10 @@
       {
         "label": "Informal Education",
         "sets": [8, 9]
+      },
+      {
+        "label": "Part Time",
+        "sets": [10]
       }
     ]
   },
@@ -445,6 +449,46 @@
         "column": 2,
         "description": "VL Performance LLC, VLPerformance.com",
         "color": "#636363"
+    },
+    {
+        "id": 41,
+        "title": "Ski Bum Level 0",
+        "start": "15 December 2000",
+        "end": "15 December 2004",
+        "set": 10,
+        "column": 7,
+        "description": "board bum actually",
+        "color": "#fed98e"
+    },
+    {
+        "id": 42,
+        "title": "Ski Bum Level 1",
+        "start": "15 December 2004",
+        "end": "15 December 2008",
+        "set": 10,
+        "column": 7,
+        "description": "board bum actually",
+        "color": "#fe9929"
+    },
+    {
+        "id": 43,
+        "title": "Ski Bum Level 2",
+        "start": "15 December 2008",
+        "end": "15 December 2013",
+        "set": 10,
+        "column": 7,
+        "description": "board bum actually",
+        "color": "#d95f0e"
+    },
+    {
+        "id": 44,
+        "title": "Ski Bum Level 3",
+        "start": "15 December 2013",
+        "end": "Current",
+        "set": 10,
+        "column": 7,
+        "description": "board bum actually",
+        "color": "#993404"
     }
   ]
 }

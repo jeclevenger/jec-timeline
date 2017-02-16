@@ -20,6 +20,7 @@
         "start": "01 June 2000",
         "end": "15 August 2003",
         "set": 1,
+        "column": 0,
         "description": "First event in this example",
         "color": "#d4b9da"
     },
@@ -29,6 +30,7 @@
         "start": "01 July 1998",
         "end": "01 August 2001",
         "set": 2,
+        "column": 1,
         "description": "the 2nd event in this example",
         "color": "#d4b9da"
     },
@@ -38,6 +40,7 @@
         "start": "01 June 2002",
         "end": "15 August 2003",
         "set": 3,
+        "column": 3,
         "description": "event description",
         "color": "#d4b9da"
     },
@@ -47,6 +50,7 @@
         "start": "01 June 2003",
         "end": "15 August 2004",
         "set": 3,
+        "column": 3,
         "description": "event description",
         "color": "#ce1256"
     },
@@ -56,6 +60,7 @@
         "start": "01 June 2006",
         "end": "15 August 2008",
         "set": 3,
+        "column": 2,
         "description": "event description",
         "color": "#6baed6"
     }

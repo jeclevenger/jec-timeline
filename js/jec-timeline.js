@@ -382,8 +382,8 @@ $(document).ready(function() {
         // scroll top already done ...because elements are erased? $("#jec-timeline-header").scrollTop(0);
     }
     if (qs['v'] == undefined) {
-        $("#currentdataset").text("example.json");
-        loadData("example")
+        $("#currentdataset").text("jec-resume_2017-02-15.json");
+        loadData("jec-resume_2017-02-15")
     } else {
         $("#currentdataset").text(someFunction(qs["v"]) + ".json");
         loadData(someFunction(qs["v"]))

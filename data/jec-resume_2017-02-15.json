@@ -1,7 +1,7 @@
 {
   "meta": {
     "data_set_title": "Employment and Education",
-    "data_set_description": "Employment and education history is the initial point of judgement in modern career exploration. I wanted to challenge myself to put a personal spin on displaying this data. With the purpose of highlighting (1) how this type of summarizing a person is inadequate, (2) communicating private information publicly without divulging in entirety, (3) examples of conversation inducing line items.",
+    "data_set_description": "Employment and education history is the initial point of judgement in modern career exploration. I wanted to challenge myself to put a personal spin on displaying this data. With the purpose of highlighting (1) how this type of summarizing a person can be inadequate, (2) communicating private information publicly without divulging in entirety, (3) examples of conversation inducing line items.",
     "nav":[
       {
         "label": "Tier 1 Employment",
@@ -207,7 +207,7 @@
         "end": "Current",
         "set": 3,
         "column": 0,
-        "description": "Senior Engineer, Mechanical Development",
+        "description": "Senior Engineer, Mechanical Development. Systems Lead: Responsible for ensuring the product meets performance targets within program schedules. Assembling the necessary teams to guide product design through performance prediction and validation. Reporting results in both working and program level environments.",
         "color": "#a50f15"
     },
     {
@@ -217,7 +217,7 @@
         "end": "Current",
         "set": 2,
         "column": 1,
-        "description": "Co-founder and CEO",
+        "description": "Founded an umbrella company for multiple web-based side projects. Consulting for front-end and full-stack development with a focus on data workflows.",
         "color": "#bdbdbd"
     },
     {
